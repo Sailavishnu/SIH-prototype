@@ -10,7 +10,6 @@ import { ToastProvider } from './components/ui';
 import PublicLayout from './components/layout/PublicLayout';
 import AdminLayout from './components/layout/AdminLayout';
 
-import Landing from './pages/public/Landing';
 import { CitizenLogin, AdminLogin } from './pages/auth/LoginPages';
 import CitizenHome from './pages/public/CitizenHome';
 import CityMap from './pages/public/CityMap';
@@ -42,10 +41,8 @@ export default function App() {
           <OverridesProvider>
             <BrowserRouter>
               <Routes>
-                {/* public entry */}
-                <Route path="/" element={<Landing />} />
-
-                {/* the two logins, on separate routes */}
+                {/* Initial Entry — Login Page */}
+                <Route path="/" element={<CitizenLogin />} />
                 <Route path="/login" element={<CitizenLogin />} />
                 <Route path="/admin/login" element={<AdminLogin />} />
 

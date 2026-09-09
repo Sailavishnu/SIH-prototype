@@ -141,6 +141,11 @@ function Rail({ open, onNavigate }) {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
 
+  const handleNav = (e) => {
+    e.currentTarget.blur();
+    if (onNavigate) onNavigate();
+  };
+
   return (
     <nav className={cx('rail', open && 'open')} aria-label="Admin sections">
       <div className="rail-brand">
@@ -156,7 +161,7 @@ function Rail({ open, onNavigate }) {
           <div key={group.section}>
             <div className="rail-section">{group.section}</div>
             {group.items.map(({ to, end, label, icon: Icon, badge }) => (
-              <NavLink key={to} to={to} end={end} onClick={onNavigate}
+              <NavLink key={to} to={to} end={end} onClick={handleNav}
                 className={({ isActive }) => cx('rail-item', isActive && 'active')} title={label}>
                 <Icon size={19} />
                 <span className="rail-label">{label}</span>
