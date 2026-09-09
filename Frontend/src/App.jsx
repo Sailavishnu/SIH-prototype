@@ -49,11 +49,13 @@ export default function App() {
                 {/* citizen experience — requires a citizen session */}
                 <Route element={<RequireAuth role="citizen" />}>
                   <Route path="/app" element={<PublicLayout />}>
-                    <Route index element={<CitizenHome />} />
-                    <Route path="map" element={<CityMap />} />
+                    <Route index element={<CityMap />} />
+                    <Route path="map" element={<Navigate to="/app" replace />} />
                     <Route path="issue/:id" element={<IssueDetail />} />
                     <Route path="report" element={<ReportIssue />} />
                     <Route path="my-reports" element={<MyReports />} />
+                    <Route path="dashboard" element={<MyReports />} />
+                    <Route path="reports" element={<MyReports />} />
                     <Route path="insights" element={<CityInsights />} />
                   </Route>
                 </Route>
