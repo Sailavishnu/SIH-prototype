@@ -1,0 +1,28 @@
+{
+  "name": "urbansight-ai",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "UrbanSight AI — smart-city road intelligence platform (citizen + authority UI)",
+  "scripts": {
+    "start": "vite --open",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "jspdf": "2.5.2",
+    "jspdf-autotable": "3.8.4",
+    "leaflet": "1.9.4",
+    "leaflet.heat": "0.2.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-leaflet": "4.2.1",
+    "react-router-dom": "6.26.2",
+    "recharts": "2.12.7"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "4.3.1",
+    "vite": "5.4.8"
+  }
+}
