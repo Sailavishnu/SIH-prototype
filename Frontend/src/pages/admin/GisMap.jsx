@@ -43,7 +43,7 @@ export default function GisMap() {
   const act = (fn, message) => { fn(); toast(message); setSelected(null); };
 
   return (
-    <div className="admin-page flush" style={{ height: 'calc(100vh - var(--topbar-h))' }}>
+    <div className="admin-page flush" style={{ flex: 1, minHeight: 'calc(100vh - var(--topbar-h))', display: 'flex', flexDirection: 'column' }}>
       {/* filter row */}
       <div className="between wrap g12" style={{ padding: '12px 24px', borderBottom: '1px solid var(--border)', background: 'var(--surface)', flex: 'none' }}>
         <ChipRow>
@@ -73,11 +73,13 @@ export default function GisMap() {
       </div>
 
       {/* map */}
-      <div style={{ flex: 1, minHeight: 0 }}>
+      <div style={{ flex: 1, minHeight: 480, display: 'flex', flexDirection: 'column' }}>
         <MapCanvas
           height="100%"
+          style={{ flex: 1, minHeight: 480 }}
           flush
-          zoom={11}
+          center={[10.9, 78.5]}
+          zoom={7}
           legend={view === 'markers' ? legend : [
             { label: 'Low density', color: '#155EEF' },
             { label: 'Moderate', color: '#14B8A6' },

@@ -3,11 +3,10 @@ import { NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../auth/AuthContext';
 import { CATEGORY_LIST, DISTRICTS, STATES, counts } from '../../data/mock';
 import { cx } from '../../lib/format';
-import ViewSwitch from './ViewSwitch';
 import {
   IconGrid, IconMap, IconTable, IconAlert, IconTraffic, IconRoad, IconBus,
   IconChart, IconFile, IconUsers, IconLogo, IconSearch, IconLogout, IconMenu,
-  IconBell, IconChevronDown, IconSettings,
+  IconBell, IconSettings,
 } from '../../lib/icons';
 
 /* ------------------------------------------------------------
@@ -139,6 +138,9 @@ export default function AdminLayout() {
 }
 
 function Rail({ open, onNavigate }) {
+  const { user, logout } = useAuth();
+  const navigate = useNavigate();
+
   return (
     <nav className={cx('rail', open && 'open')} aria-label="Admin sections">
       <div className="rail-brand">
@@ -166,10 +168,28 @@ function Rail({ open, onNavigate }) {
       </div>
 
       <div className="rail-foot">
-        <NavLink to="/admin/exports" className="rail-item" title="Settings" onClick={onNavigate}>
-          <IconSettings size={19} />
-          <span className="rail-label">Settings</span>
-        </NavLink>
+        {user && (
+          <div className="rail-user-block">
+            <div className="rail-user-profile" title={user.name}>
+              <span className="avatar" style={{ width: 28, height: 28, fontSize: 11 }}>{user.initials}</span>
+              <div className="rail-user-meta">
+                <strong>{user.name}</strong>
+                <span>{user.title || 'Authority'}</span>
+              </div>
+            </div>
+            <button
+              className="rail-item rail-logout"
+              title="Sign out"
+              onClick={() => {
+                logout();
+                navigate('/admin/login', { replace: true });
+              }}
+            >
+              <IconLogout size={19} />
+              <span className="rail-label">Sign out</span>
+            </button>
+          </div>
+        )}
       </div>
     </nav>
   );
@@ -212,51 +232,11 @@ function TopBar({ meta, onMenu }) {
       </div>
 
       <div className="row g12">
-        <ViewSwitch />
         <button className="icon-btn" aria-label="Notifications" style={{ position: 'relative' }}>
           <IconBell size={19} />
           <span style={{ position: 'absolute', top: 5, right: 6, width: 7, height: 7, borderRadius: '50%', background: 'var(--critical)', border: '1.5px solid #fff' }} />
         </button>
-        <AccountMenu />
       </div>
     </header>
-  );
-}
-
-function AccountMenu() {
-  const { user, logout } = useAuth();
-  const navigate = useNavigate();
-  const [open, setOpen] = useState(false);
-  if (!user) return null;
-
-  return (
-    <div style={{ position: 'relative' }}>
-      <button className="account" onClick={() => setOpen((v) => !v)} aria-expanded={open}>
-        <span className="avatar">{user.initials}</span>
-        <span className="account-text" style={{ textAlign: 'left' }}>
-          <strong>{user.name}</strong>
-          <span>{user.title || 'Authority'}</span>
-        </span>
-        <IconChevronDown size={14} />
-      </button>
-
-      {open && (
-        <>
-          <div style={{ position: 'fixed', inset: 0, zIndex: 40 }} onClick={() => setOpen(false)} />
-          <div className="card" style={{ position: 'absolute', right: 0, top: 46, width: 244, zIndex: 41, boxShadow: 'var(--sh-lg)', overflow: 'hidden' }}>
-            <div style={{ padding: '14px 16px', borderBottom: '1px solid var(--border)' }}>
-              <strong style={{ fontSize: 14, display: 'block' }}>{user.name}</strong>
-              <span className="meta">{user.email}</span>
-              <div className="meta" style={{ marginTop: 4 }}>{user.org}</div>
-            </div>
-            <button className="rail-item" style={{ width: 'calc(100% - 16px)', margin: 8 }}
-              onClick={() => { logout(); navigate('/admin/login', { replace: true }); }}>
-              <IconLogout size={18} />
-              <span style={{ opacity: 1 }}>Sign out</span>
-            </button>
-          </div>
-        </>
-      )}
-    </div>
   );
 }

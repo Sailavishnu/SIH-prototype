@@ -34,8 +34,9 @@ export default function Traffic() {
         />
         <div style={{ padding: 20 }}>
           <MapCanvas
-            height={400}
-            zoom={11}
+            height={440}
+            center={[10.9, 78.5]}
+            zoom={7}
             legend={[
               { label: 'Free flowing', color: '#155EEF' },
               { label: 'Moderate', color: '#14B8A6' },
@@ -43,7 +44,7 @@ export default function Traffic() {
               { label: 'Severe', color: '#F04438' },
             ]}
           >
-            <HeatLayer points={congestionPoints} radius={38} blur={30} />
+            <HeatLayer points={congestionPoints} radius={34} blur={24} />
           </MapCanvas>
         </div>
       </Card>

@@ -229,7 +229,7 @@ export default function ReportsExport() {
           region,
           format,
           size: `${(config.rows.length * (format === 'CSV' ? 0.12 : 2.4) + 48).toFixed(0)} KB`,
-          by: 'Er. K. Bhuvaneswari',
+          by: 'City Administrator',
           at: Date.now(),
           config,
         },

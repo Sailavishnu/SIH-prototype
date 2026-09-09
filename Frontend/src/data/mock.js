@@ -78,6 +78,7 @@ export const PRIORITIES = {
    Geography — real Chennai localities
    ============================================================ */
 export const LOCATIONS = [
+  // --- Chennai & Metro Region ---
   { area: 'T. Nagar',        zone: 'Central Zone', district: 'Chennai',       lat: 13.0418, lng: 80.2341, road: 'Usman Road' },
   { area: 'Adyar',           zone: 'South Zone',   district: 'Chennai',       lat: 13.0067, lng: 80.2570, road: 'Lattice Bridge Road' },
   { area: 'Velachery',       zone: 'South Zone',   district: 'Chennai',       lat: 12.9791, lng: 80.2210, road: 'Velachery Main Road' },
@@ -92,24 +93,50 @@ export const LOCATIONS = [
   { area: 'Ambattur',        zone: 'West Zone',    district: 'Tiruvallur',    lat: 13.1143, lng: 80.1548, road: 'MTH Road' },
   { area: 'Tambaram',        zone: 'South Zone',   district: 'Chengalpattu',  lat: 12.9229, lng: 80.1275, road: 'GST Road' },
   { area: 'Kodambakkam',     zone: 'Central Zone', district: 'Chennai',       lat: 13.0500, lng: 80.2260, road: 'Arcot Road' },
-  { area: 'Royapettah',      zone: 'Central Zone', district: 'Chennai',       lat: 13.0537, lng: 80.2646, road: 'Peters Road' },
   { area: 'Besant Nagar',    zone: 'East Zone' ,   district: 'Chennai',       lat: 12.9987, lng: 80.2669, road: '2nd Avenue' },
-  { area: 'Saidapet',        zone: 'South Zone',   district: 'Chennai',       lat: 13.0213, lng: 80.2231, road: 'Anna Salai' },
-  { area: 'Vadapalani',      zone: 'West Zone',    district: 'Chennai',       lat: 13.0500, lng: 80.2121, road: '100 Feet Road' },
-  { area: 'Sholinganallur',  zone: 'South Zone',   district: 'Chengalpattu',  lat: 12.9010, lng: 80.2279, road: 'OMR Junction' },
-  { area: 'Chromepet',       zone: 'South Zone',   district: 'Chengalpattu',  lat: 12.9516, lng: 80.1462, road: 'GST Road' },
-  { area: 'Purasawalkam',    zone: 'North Zone',   district: 'Chennai',       lat: 13.0910, lng: 80.2500, road: 'Purasawalkam High Road' },
-  { area: 'Washermanpet',    zone: 'East Zone' ,   district: 'Chennai',       lat: 13.1185, lng: 80.2870, road: 'Thiruvottiyur High Road' },
-  { area: 'Triplicane',      zone: 'East Zone'   , district: 'Chennai',       lat: 13.0569, lng: 80.2750, road: 'Bharathi Salai' },
-  { area: 'Alwarpet',        zone: 'Central Zone', district: 'Chennai',       lat: 13.0339, lng: 80.2530, road: 'TTK Road' },
-  { area: 'Kilpauk',         zone: 'North Zone',   district: 'Chennai',       lat: 13.0800, lng: 80.2400, road: 'Poonamallee High Road' },
-  { area: 'Perambur',        zone: 'North Zone',   district: 'Chennai',       lat: 13.1067, lng: 80.2333, road: 'Paper Mills Road' },
   { area: 'Avadi',           zone: 'West Zone',    district: 'Tiruvallur',    lat: 13.1147, lng: 80.1098, road: 'CTH Road' },
-  { area: 'Medavakkam',      zone: 'South Zone',   district: 'Chengalpattu',  lat: 12.9184, lng: 80.1926, road: 'Velachery-Tambaram Road' },
+  { area: 'Chromepet',       zone: 'South Zone',   district: 'Chengalpattu',  lat: 12.9516, lng: 80.1462, road: 'GST Road' },
+  { area: 'Perambur',        zone: 'North Zone',   district: 'Chennai',       lat: 13.1067, lng: 80.2333, road: 'Paper Mills Road' },
+
+  // --- North Tamil Nadu ---
+  { area: 'Katpadi',         zone: 'North Zone',   district: 'Vellore',       lat: 12.9698, lng: 79.1384, road: 'Chittoor Main Road' },
+  { area: 'Bagayam',         zone: 'North Zone',   district: 'Vellore',       lat: 12.8712, lng: 79.1332, road: 'Bagayam High Road' },
+  { area: 'Kanchipuram Town', zone: 'North Zone',  district: 'Kancheepuram',  lat: 12.8342, lng: 79.7036, road: 'Gandhi Road' },
+  { area: 'Tiruvannamalai',  zone: 'North Zone',   district: 'Tiruvannamalai', lat: 12.2253, lng: 79.0747, road: 'Girivalam Chengam Road' },
+  { area: 'Hosur SIPCOT',    zone: 'North Zone',   district: 'Krishnagiri',   lat: 12.7409, lng: 77.8253, road: 'Bagalur Road' },
+
+  // --- South Tamil Nadu ---
+  { area: 'Mattuthavani',    zone: 'South Zone',   district: 'Madurai',       lat: 9.9392,  lng: 78.1567, road: 'Melur Main Road' },
+  { area: 'Simmakkal',       zone: 'South Zone',   district: 'Madurai',       lat: 9.9252,  lng: 78.1198, road: 'North Veli Street' },
+  { area: 'Palayamkottai',   zone: 'South Zone',   district: 'Tirunelveli',   lat: 8.7139,  lng: 77.7567, road: 'Tirunelveli High Road' },
+  { area: 'Vannarpettai',    zone: 'South Zone',   district: 'Tirunelveli',   lat: 8.7302,  lng: 77.7314, road: 'South Bypass Road' },
+  { area: 'Nagercoil',       zone: 'South Zone',   district: 'Kanyakumari',   lat: 8.1833,  lng: 77.4119, road: 'Cape Road' },
+  { area: 'Thoothukudi Port', zone: 'South Zone',  district: 'Thoothukudi',   lat: 8.7642,  lng: 78.1348, road: 'Harbour Express Highway' },
+  { area: 'Dindigul Town',   zone: 'South Zone',   district: 'Dindigul',      lat: 10.3673, lng: 77.9803, road: 'Palani Main Road' },
+
+  // --- West Tamil Nadu ---
+  { area: 'Gandhipuram',     zone: 'West Zone',    district: 'Coimbatore',    lat: 11.0168, lng: 76.9558, road: 'Cross Cut Road' },
+  { area: 'RS Puram',        zone: 'West Zone',    district: 'Coimbatore',    lat: 11.0086, lng: 76.9482, road: 'DB Road' },
+  { area: 'Peelamedu',       zone: 'West Zone',    district: 'Coimbatore',    lat: 11.0267, lng: 77.0125, road: 'Avinashi Road' },
+  { area: 'Salem Five Roads', zone: 'West Zone',   district: 'Salem',         lat: 11.6643, lng: 78.1460, road: 'Omalur Main Road' },
+  { area: 'Brough Road',     zone: 'West Zone',    district: 'Erode',         lat: 11.3410, lng: 77.7172, road: 'Perundurai Road' },
+  { area: 'Kumaran Nagar',   zone: 'West Zone',    district: 'Tiruppur',      lat: 11.1085, lng: 77.3411, road: 'Avinashi Bypass' },
+
+  // --- East & Central Coastal Tamil Nadu ---
+  { area: 'Thillai Nagar',   zone: 'East Zone',    district: 'Tiruchirappalli', lat: 10.8271, lng: 78.6890, road: 'Salai Road' },
+  { area: 'Trichy Cantonment', zone: 'East Zone',  district: 'Tiruchirappalli', lat: 10.7905, lng: 78.7047, road: 'Bharathidasan Salai' },
+  { area: 'Thanjavur Palace', zone: 'East Zone',   district: 'Thanjavur',     lat: 10.7870, lng: 79.1378, road: 'Medical College Road' },
+  { area: 'Cuddalore Port',  zone: 'East Zone',    district: 'Cuddalore',     lat: 11.7480, lng: 79.7714, road: 'Imperial Road' },
+  { area: 'Nagapattinam Town', zone: 'East Zone',  district: 'Nagapattinam',  lat: 10.7672, lng: 79.8449, road: 'Beach Road' },
+  { area: 'Kumbakonam',      zone: 'East Zone',    district: 'Thanjavur',     lat: 10.9602, lng: 79.3845, road: 'TSR Big Street' },
 ];
 
 export const ZONES = ['North Zone', 'South Zone', 'Central Zone', 'East Zone', 'West Zone'];
-export const DISTRICTS = ['Chennai', 'Tiruvallur', 'Chengalpattu', 'Kancheepuram'];
+export const DISTRICTS = [
+  'Chennai', 'Chengalpattu', 'Tiruvallur', 'Kancheepuram', 'Vellore', 'Tiruvannamalai', 'Krishnagiri',
+  'Coimbatore', 'Salem', 'Erode', 'Tiruppur', 'Tiruchirappalli', 'Thanjavur', 'Cuddalore', 'Nagapattinam',
+  'Madurai', 'Tirunelveli', 'Kanyakumari', 'Thoothukudi', 'Dindigul',
+];
 export const STATES = ['Tamil Nadu'];
 
 /* ============================================================
@@ -290,10 +317,10 @@ function makeIssue(i) {
   };
 }
 
-export const issues = Array.from({ length: 86 }, (_, i) => makeIssue(i)).sort((a, b) => b.detectedAt - a.detectedAt);
+export const issues = Array.from({ length: 148 }, (_, i) => makeIssue(i)).sort((a, b) => b.detectedAt - a.detectedAt);
 
 /* Reports filed by the signed-in citizen — shown in "My Reports" */
-export const myReportIds = issues.filter((it) => it.source === 'Citizen').slice(0, 7).map((it) => it.id);
+export const myReportIds = issues.filter((it) => it.source === 'Citizen').slice(0, 8).map((it) => it.id);
 issues.forEach((it) => { it.mine = myReportIds.includes(it.id); });
 
 export const getIssue = (id) => issues.find((it) => it.id === id);
@@ -322,7 +349,7 @@ const PLATE_SERIES = ['TN 07', 'TN 09', 'TN 10', 'TN 11', 'TN 01', 'TN 22', 'TN 
 const PLATE_LETTERS = ['AB', 'BC', 'CG', 'DK', 'AL', 'BM', 'CH', 'AZ', 'EF', 'BQ'];
 const VEHICLE_TYPES = ['Hatchback', 'Sedan', 'SUV', 'Two-wheeler', 'Auto-rickshaw', 'Light truck', 'Tempo'];
 
-export const incidents = Array.from({ length: 22 }, (_, i) => {
+export const incidents = Array.from({ length: 34 }, (_, i) => {
   const type = INCIDENT_TYPES[Math.floor(rand() * INCIDENT_TYPES.length)];
   const loc = LOCATIONS[Math.floor(rand() * LOCATIONS.length)];
   const ageDays = between(0, 21);
@@ -366,7 +393,7 @@ export const getIncident = (id) => incidents.find((i) => i.id === id);
 export const departments = [
   { key: 'road', name: 'Road Maintenance', head: 'Er. S. Ramanathan', color: '#F04438', crews: 14, categories: ['pothole', 'damaged_road', 'zebra_crossing'] },
   { key: 'traffic', name: 'Traffic Police', head: 'DCP T. Selvakumar', color: '#EAAA08', crews: 9, categories: ['congestion'] },
-  { key: 'municipal', name: 'Municipal Corporation', head: 'Er. K. Bhuvaneswari', color: '#7A5AF8', crews: 21, categories: ['signboard', 'divider'] },
+  { key: 'municipal', name: 'Municipal Corporation', head: 'Er. P. Radhakrishnan', color: '#7A5AF8', crews: 21, categories: ['signboard', 'divider'] },
   { key: 'water', name: 'Water Management', head: 'Er. M. Arulmozhi', color: '#0BA5EC', crews: 11, categories: ['waterlogging'] },
   { key: 'safety', name: 'Safety Department', head: 'ADCP R. Jeyanthi', color: '#E31B54', crews: 7, categories: ['safety_incident'] },
 ];
@@ -520,16 +547,23 @@ export const zoneDensity = [
 /* Congestion points for the heat overlay: [lat, lng, intensity 0..1] */
 export const congestionPoints = (() => {
   const hot = [
+    // Chennai & Metro
     [13.0418, 80.2341, 1.0], [13.0213, 80.2231, 0.95], [13.0067, 80.2206, 0.9],
-    [13.0569, 80.2425, 0.85], [13.0732, 80.2609, 0.8], [13.0500, 80.2260, 0.78],
-    [12.9791, 80.2210, 0.72], [13.0850, 80.2101, 0.7], [13.0339, 80.2698, 0.65],
-    [12.9401, 80.2350, 0.6], [13.1143, 80.1548, 0.55], [12.9229, 80.1275, 0.5],
+    [13.0569, 80.2425, 0.85], [12.9229, 80.1275, 0.75],
+    // North TN
+    [12.9698, 79.1384, 0.85], [12.7409, 77.8253, 0.8], [12.8342, 79.7036, 0.7],
+    // West TN
+    [11.0168, 76.9558, 0.95], [11.0267, 77.0125, 0.85], [11.6643, 78.1460, 0.88], [11.3410, 77.7172, 0.75],
+    // South TN
+    [9.9392, 78.1567, 0.92], [9.9252, 78.1198, 0.85], [8.7139, 77.7567, 0.8], [8.7642, 78.1348, 0.72], [8.1833, 77.4119, 0.7],
+    // East TN
+    [10.8271, 78.6890, 0.9], [10.7905, 78.7047, 0.82], [10.7870, 79.1378, 0.78], [11.7480, 79.7714, 0.68],
   ];
   const out = [];
   hot.forEach(([lat, lng, w]) => {
     out.push([lat, lng, w]);
-    for (let i = 0; i < 16; i++) {
-      out.push([lat + between(-0.014, 0.014), lng + between(-0.014, 0.014), Math.max(0.12, w * between(0.25, 0.85))]);
+    for (let i = 0; i < 14; i++) {
+      out.push([lat + between(-0.02, 0.02), lng + between(-0.02, 0.02), Math.max(0.15, w * between(0.3, 0.9))]);
     }
   });
   return out;
@@ -649,7 +683,7 @@ export const reportHistory = [
   { id: 'RPT-4818', name: 'Weekly Infrastructure Report', range: span(9, 3), region: 'North Zone', format: 'PDF', size: '612 KB', by: 'Er. S. Ramanathan', at: NOW - 2 * DAY },
   { id: 'RPT-4809', name: 'Traffic Congestion Report', range: span(10, 4), region: 'Central Zone', format: 'CSV', size: '96 KB', by: 'DCP T. Selvakumar', at: NOW - 3 * DAY },
   { id: 'RPT-4794', name: 'Incident Report', range: span(38, 8), region: 'All Zones', format: 'PDF', size: '1.1 MB', by: 'ADCP R. Jeyanthi', at: NOW - 6 * DAY },
-  { id: 'RPT-4788', name: 'Monthly Performance Report', range: lastMonthLabel, region: 'All Zones', format: 'PDF', size: '742 KB', by: 'Er. K. Bhuvaneswari', at: NOW - 8 * DAY },
+  { id: 'RPT-4788', name: 'Monthly Performance Report', range: lastMonthLabel, region: 'All Zones', format: 'PDF', size: '742 KB', by: 'City Administrator', at: NOW - 8 * DAY },
 ];
 
 /* ============================================================
@@ -667,9 +701,9 @@ export const DEMO_ACCOUNTS = {
   admin: {
     email: 'admin@chennai.gov.in',
     password: 'admin1234',
-    name: 'Er. K. Bhuvaneswari',
+    name: 'City Administrator',
     role: 'admin',
-    initials: 'KB',
+    initials: 'AD',
     title: 'Deputy Commissioner — Works',
     org: 'Greater Chennai Corporation',
   },

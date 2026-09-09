@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../auth/AuthContext';
 import { cx } from '../../lib/format';
-import ViewSwitch from './ViewSwitch';
 import { IconLogo, IconHome, IconMap, IconPen, IconInbox, IconChart, IconLogout, IconChevronDown } from '../../lib/icons';
 
 const LINKS = [
@@ -69,7 +68,6 @@ function PublicNav() {
         </div>
 
         <div className="row g12" style={{ marginLeft: 'auto' }}>
-          <ViewSwitch />
           <NavLink to="/app/report" className="btn btn-primary btn-sm">Report an Issue</NavLink>
 
           {user && (

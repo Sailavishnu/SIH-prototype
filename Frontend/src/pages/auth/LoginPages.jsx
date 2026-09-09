@@ -63,10 +63,6 @@ function LoginScreen({ variant }) {
   const submit = async (e) => {
     e.preventDefault();
     setError('');
-    if (!email.trim() || !password) {
-      setError('Enter both your email address and password.');
-      return;
-    }
     setBusy(true);
     const res = await login(c.role, email, password);
     setBusy(false);
