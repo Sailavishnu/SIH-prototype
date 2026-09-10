@@ -1,0 +1,125 @@
+{
+    "description": "",
+    "tags": [
+        {
+            "id": 16556766,
+            "tagId": 29659,
+            "name": "China_Drone",
+            "value": null,
+            "labelerLogin": "inbox@datasetninja.com",
+            "createdAt": "2024-01-22T15:38:16.168Z",
+            "updatedAt": "2024-01-22T15:38:16.168Z"
+        }
+    ],
+    "size": {
+        "height": 512,
+        "width": 512
+    },
+    "objects": [
+        {
+            "id": 138964058,
+            "classId": 6512000,
+            "objectId": null,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "inbox@datasetninja.com",
+            "createdAt": "2024-01-22T15:38:16.172Z",
+            "updatedAt": "2024-01-22T15:38:16.172Z",
+            "tags": [
+                {
+                    "id": 104950984,
+                    "tagId": 29666,
+                    "name": "detail",
+                    "value": "equal interval",
+                    "labelerLogin": "inbox@datasetninja.com",
+                    "createdAt": "2024-01-22T15:38:16.172Z",
+                    "updatedAt": "2024-01-22T15:38:16.172Z"
+                }
+            ],
+            "classTitle": "transverse crack",
+            "points": {
+                "exterior": [
+                    [
+                        9,
+                        467
+                    ],
+                    [
+                        204,
+                        489
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 138964057,
+            "classId": 6512000,
+            "objectId": null,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "inbox@datasetninja.com",
+            "createdAt": "2024-01-22T15:38:16.171Z",
+            "updatedAt": "2024-01-22T15:38:16.171Z",
+            "tags": [
+                {
+                    "id": 104950983,
+                    "tagId": 29666,
+                    "name": "detail",
+                    "value": "equal interval",
+                    "labelerLogin": "inbox@datasetninja.com",
+                    "createdAt": "2024-01-22T15:38:16.170Z",
+                    "updatedAt": "2024-01-22T15:38:16.170Z"
+                }
+            ],
+            "classTitle": "transverse crack",
+            "points": {
+                "exterior": [
+                    [
+                        199,
+                        304
+                    ],
+                    [
+                        511,
+                        350
+                    ]
+                ],
+                "interior": []
+            }
+        },
+        {
+            "id": 138964056,
+            "classId": 6511999,
+            "objectId": null,
+            "description": "",
+            "geometryType": "rectangle",
+            "labelerLogin": "inbox@datasetninja.com",
+            "createdAt": "2024-01-22T15:38:16.169Z",
+            "updatedAt": "2024-01-22T15:38:16.169Z",
+            "tags": [
+                {
+                    "id": 104950982,
+                    "tagId": 29666,
+                    "name": "detail",
+                    "value": "wheel mark part",
+                    "labelerLogin": "inbox@datasetninja.com",
+                    "createdAt": "2024-01-22T15:38:16.169Z",
+                    "updatedAt": "2024-01-22T15:38:16.169Z"
+                }
+            ],
+            "classTitle": "longitudinal crack",
+            "points": {
+                "exterior": [
+                    [
+                        199,
+                        1
+                    ],
+                    [
+                        277,
+                        297
+                    ]
+                ],
+                "interior": []
+            }
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "description": "",
+    "tags": [
+        {
+            "id": 16559640,
+            "tagId": 29659,
+            "name": "China_Drone",
+            "value": null,
+            "labelerLogin": "inbox@datasetninja.com",
+            "createdAt": "2024-01-22T15:40:00.386Z",
+            "updatedAt": "2024-01-22T15:40:00.386Z"
+        }
+    ],
+    "size": {
+        "height": 512,
+        "width": 512
+    },
+    "objects": []
+}
