@@ -1,6 +1,6 @@
 from ultralytics import YOLO
 
-MODEL = r"E:\SIH 26124 ph tracker\ML layer\runs\detect\runs\detect\pothole_yolo11s_960_50ep-4\weights\last.pt"
+MODEL = r"E:\SIH 26124 ph tracker\ML layer\runs\detect\runs\detect\combined9_yolo11s_640_20ep\weights\last.pt"
 
 def main():
     model = YOLO(MODEL)
