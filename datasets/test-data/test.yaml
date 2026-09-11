@@ -1,0 +1,7 @@
+path: E:/SIH 26124 ph tracker/dataset/test-data
+
+train: images
+val: images
+
+names:
+  0: pothole
