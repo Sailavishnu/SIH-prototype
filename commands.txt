@@ -523,3 +523,529 @@ GStreamer → preprocessing → YOLO input
 frame.
 
 That is the most useful debugging artifact right now.
+
+
+(venv) PS E:\SIH 26124 ph tracker\ML layer> yolo detect predict model="E:\SIH 26124 ph tracker\ML layer\runs\detect\runs\detect\combined9_yolo11s_640_20ep\weights\best.pt" source="E:\SIH 26124 ph tracker\dataset\test-data\Images" imgsz=640 conf=0.10 iou=0.50 save=True
+Ultralytics 8.4.143  Python-3.13.7 torch-2.11.0+cu128 CUDA:0 (NVIDIA GeForce RTX 5050 Laptop GPU, 8151MiB)
+YOLO11s summary (fused): 100 layers, 9,416,283 parameters, 0 gradients, 21.4 GFLOPs
+
+image 1/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\1600px_COLOURBOX2686380.jpg: 448x640 1 longitudinal_crack, 12.2ms
+image 2/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\1750906691478-km6q3o6lqpbjpg_j395AbTMQ.webp: 480x640 3 potholes, 61.0ms
+image 3/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\1750906717860-btf8u8pgu3qjpg_5bqigJ2tn.webp: 640x480 3 potholes, 1 alligator_crack, 58.3ms
+image 4/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\1750906747244-crzfky64oejpg_V-sdyRnxE.webp: 480x640 9 potholes, 15.3ms
+image 5/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\1750906763645-k7qsvbh56ajpg_lHNUruHJn.webp: 480x640 6 potholes, 15.2ms
+image 6/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\1757594573Construction_Area_Sign.png: 448x640 2 signboards, 16.1ms
+image 7/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (1).jpg: 640x480 1 signboard, 23.8ms
+image 8/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (10).jpg: 640x480 1 signboard, 14.4ms
+image 9/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (100).jpg: 640x480 1 signboard, 14.2ms
+image 10/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (101).jpg: 640x480 (no detections), 14.0ms
+image 11/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (102).jpg: 640x480 1 alligator_crack, 14.7ms
+image 12/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (103).jpg: 640x480 1 other_corruption, 14.1ms
+image 13/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (104).jpg: 640x480 1 signboard, 14.4ms
+image 14/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (105).jpg: 640x320 6 signboards, 61.1ms
+image 15/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (106).jpg: 640x480 (no detections), 17.3ms
+image 16/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (107).jpg: 640x480 1 signboard, 14.5ms
+image 17/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (108).jpg: 640x480 1 pothole, 14.0ms
+image 18/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (109).jpg: 640x480 (no detections), 13.8ms
+image 19/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (11).jpg: 640x480 1 signboard, 14.5ms
+image 20/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (110).jpg: 640x480 (no detections), 14.1ms
+image 21/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (111).jpg: 640x480 (no detections), 14.0ms
+image 22/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (112).jpg: 640x480 (no detections), 16.4ms
+image 23/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (113).jpg: 640x480 2 signboards, 13.9ms
+image 24/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (114).jpg: 640x480 1 pothole, 1 signboard, 6.3ms
+image 25/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (115).jpg: 640x480 2 signboards, 8.9ms
+image 26/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (116).jpg: 640x480 1 pothole, 1 alligator_crack, 6.8ms
+image 27/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (117).jpg: 640x480 1 longitudinal_crack, 7.1ms
+image 28/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (118).jpg: 640x480 1 signboard, 6.8ms
+image 29/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (119).jpg: 640x480 1 signboard, 6.2ms
+image 30/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (12).jpg: 640x384 1 signboard, 31.1ms
+image 31/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (120).jpg: 640x480 1 signboard, 7.2ms
+image 32/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (121).jpg: 640x480 1 signboard, 11.2ms
+image 33/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (122).jpg: 640x480 2 alligator_cracks, 1 signboard, 6.6ms
+image 34/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (123).jpg: 640x480 1 other_corruption, 1 signboard, 6.4ms
+image 35/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (124).jpg: 640x480 1 signboard, 8.0ms
+image 36/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (125).jpg: 640x480 1 pothole, 1 transverse_crack, 13.7ms
+image 37/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (126).jpg: 640x480 (no detections), 6.4ms
+image 38/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (127).jpg: 640x480 (no detections), 7.0ms
+image 39/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (128).jpg: 640x480 1 transverse_crack, 6.8ms
+image 40/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (129).jpg: 640x480 3 signboards, 6.7ms
+image 41/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (13).jpg: 640x480 (no detections), 6.4ms
+image 42/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (130).jpg: 256x640 1 signboard, 32.6ms
+image 43/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (131).jpg: 640x416 1 signboard, 33.2ms
+image 44/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (132).jpg: 480x640 2 signboards, 6.6ms
+image 45/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (133).jpg: 640x640 1 signboard, 32.4ms
+image 46/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (134).jpg: 512x640 1 signboard, 31.8ms
+image 47/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (135).jpg: 640x544 1 signboard, 31.8ms
+image 48/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (136).jpg: 640x512 1 signboard, 32.2ms
+image 49/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (137).jpg: 352x640 1 signboard, 31.6ms
+image 50/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (138).jpg: 640x384 4 signboards, 6.6ms
+image 51/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (139).jpg: 352x640 1 signboard, 7.7ms
+image 52/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (14).jpg: 640x480 1 other_corruption, 1 signboard, 7.3ms
+image 53/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (140).jpg: 640x480 1 signboard, 6.3ms
+image 54/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (141).jpg: 640x480 1 signboard, 6.5ms
+image 55/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (142).jpg: 640x320 1 signboard, 8.2ms
+image 56/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (143).jpg: 640x480 1 signboard, 6.9ms
+image 57/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (144).jpg: 640x480 1 signboard, 7.7ms
+image 58/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (145).jpg: 640x480 1 signboard, 6.3ms
+image 59/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (146).jpg: 640x480 1 signboard, 6.5ms
+image 60/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (147).jpg: 640x480 1 signboard, 7.4ms
+image 61/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (148).jpg: 640x480 (no detections), 6.8ms
+image 62/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (149).jpg: 640x480 1 signboard, 6.4ms
+image 63/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (15).jpg: 640x480 (no detections), 6.4ms
+image 64/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (150).jpg: 640x480 (no detections), 6.3ms
+image 65/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (16).jpg: 640x480 (no detections), 7.8ms
+image 66/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (17).jpg: 640x480 (no detections), 6.9ms
+image 67/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (18).jpg: 640x480 (no detections), 7.2ms
+image 68/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (19).jpg: 640x480 1 pothole, 1 alligator_crack, 1 signboard, 6.1ms
+image 69/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (2).jpg: 640x320 1 signboard, 6.5ms
+image 70/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (20).jpg: 320x640 (no detections), 38.1ms
+image 71/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (21).jpg: 320x640 1 longitudinal_crack, 7.5ms
+image 72/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (22).jpg: 640x320 1 signboard, 11.7ms
+image 73/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (23).jpg: 640x480 1 pothole, 1 longitudinal_crack, 1 transverse_crack, 7.3ms
+image 74/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (24).jpg: 320x640 (no detections), 11.3ms
+image 75/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (25).jpg: 640x480 1 signboard, 7.5ms
+image 76/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (26).jpg: 640x480 1 signboard, 8.4ms
+image 77/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (27).jpg: 640x384 1 transverse_crack, 9.0ms
+image 78/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (28).jpg: 320x640 1 pothole, 14.1ms
+image 79/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (29).jpg: 640x480 (no detections), 8.0ms
+image 80/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (3).jpg: 640x480 (no detections), 9.7ms
+image 81/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (30).jpg: 640x320 1 signboard, 14.7ms
+image 82/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (31).jpg: 640x480 1 signboard, 7.3ms
+image 83/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (32).jpg: 320x640 (no detections), 7.5ms
+image 84/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (33).jpg: 640x480 1 longitudinal_crack, 8.0ms
+image 85/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (34).jpg: 320x640 1 other_corruption, 11.1ms
+image 86/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (35).jpg: 640x480 1 signboard, 7.0ms
+image 87/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (36).jpg: 640x480 1 signboard, 6.6ms
+image 88/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (37).jpg: 640x480 1 alligator_crack, 2 signboards, 6.7ms
+image 89/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (38).jpg: 640x480 (no detections), 6.8ms
+image 90/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (39).jpg: 640x480 2 signboards, 7.0ms
+image 91/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (4).jpg: 640x480 1 signboard, 7.1ms
+image 92/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (40).jpg: 320x640 (no detections), 7.0ms
+image 93/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (41).jpg: 640x480 1 signboard, 7.2ms
+image 94/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (42).jpg: 640x480 1 pothole, 1 transverse_crack, 1 signboard, 10.8ms
+image 95/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (43).jpg: 640x320 1 signboard, 14.2ms
+image 96/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (44).jpg: 640x480 1 signboard, 16.0ms
+image 97/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (45).jpg: 640x480 (no detections), 15.5ms
+image 98/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (46).jpg: 640x480 1 longitudinal_crack, 29.4ms
+image 99/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (47).jpg: 640x480 1 signboard, 15.4ms
+image 100/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (48).jpg: 640x480 1 signboard, 15.6ms
+image 101/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (49).jpg: 640x480 1 signboard, 15.5ms
+image 102/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (5).jpg: 640x480 1 signboard, 15.2ms
+image 103/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (50).jpg: 640x480 (no detections), 15.2ms
+image 104/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (51).jpg: 640x320 1 signboard, 11.5ms
+image 105/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (52).jpg: 640x480 1 signboard, 16.4ms
+image 106/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (53).jpg: 640x480 1 pothole, 1 signboard, 16.9ms
+image 107/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (54).jpg: 640x480 1 alligator_crack, 1 signboard, 16.4ms
+image 108/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (55).jpg: 640x480 1 longitudinal_crack, 1 signboard, 14.7ms
+image 109/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (56).jpg: 640x320 1 signboard, 14.1ms
+image 110/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (57).jpg: 640x480 1 signboard, 17.6ms
+image 111/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (58).jpg: 640x480 1 alligator_crack, 15.5ms
+image 112/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (59).jpg: 640x480 1 signboard, 15.6ms
+image 113/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (6).jpg: 640x480 1 signboard, 19.3ms
+image 114/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (60).jpg: 640x480 1 signboard, 16.4ms
+image 115/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (61).jpg: 640x320 1 signboard, 13.8ms
+image 116/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (62).jpg: 640x480 (no detections), 29.2ms
+image 117/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (63).jpg: 640x480 1 signboard, 17.1ms
+image 118/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (64).jpg: 640x480 1 longitudinal_crack, 29.2ms
+image 119/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (65).jpg: 640x480 1 signboard, 25.6ms
+image 120/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (66).jpg: 640x480 1 signboard, 15.9ms
+image 121/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (67).jpg: 640x480 1 signboard, 38.6ms
+image 122/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (68).jpg: 640x480 1 signboard, 15.1ms
+image 123/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (69).jpg: 640x320 (no detections), 19.0ms
+image 124/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (7).jpg: 640x480 1 signboard, 35.3ms
+image 125/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (70).jpg: 640x320 1 signboard, 14.9ms
+image 126/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (71).jpg: 640x480 2 signboards, 16.3ms
+image 127/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (72).jpg: 640x480 (no detections), 14.4ms
+image 128/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (73).jpg: 640x480 1 signboard, 14.5ms
+image 129/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (74).jpg: 640x480 2 potholes, 1 signboard, 14.1ms
+image 130/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (75).jpg: 640x480 1 signboard, 15.5ms
+image 131/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (76).jpg: 640x480 1 signboard, 16.3ms
+image 132/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (77).jpg: 640x480 2 signboards, 15.9ms
+image 133/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (78).jpg: 640x480 1 other_corruption, 1 signboard, 14.5ms
+image 134/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (79).jpg: 640x480 1 pothole, 1 alligator_crack, 15.4ms
+image 135/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Datacluster Traffic Sign (8).jpg: 640x480 1 signboard, 16.0ms
+image 136/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Mumbai--India---July-18--2023---Huge-potholes-Seen_1689706903750.webp: 384x640 8 potholes, 62.4ms
+image 137/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\OIP (1).webp: 544x640 (no detections), 59.3ms
+image 138/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\OIP (2).webp: 544x640 (no detections), 15.3ms
+image 139/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\OIP.webp: 640x480 1 signboard, 15.8ms
+image 140/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\Occupation-of-zebra-crossing-at-intersection-and-diagonal-crossing.webp: 384x640 1 pothole, 16.3ms
+image 141/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\R (2).jpg: 640x640 3 potholes, 17.2ms
+image 142/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\R.jpg: 448x640 2 signboards, 17.4ms
+image 143/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\a-paved-road-filled-with-many-large-potholes-the-potholes-are-filled-with-water-2B1H0NJ.jpg: 480x640 4 potholes, 17.4ms
+image 144/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\damaged-broken-traffic-signs-bus-direction-arrow-pedestrian-crossing-road-laying-ground-urban-street-216144364.webp: 480x640 2 signboards, 15.1ms
+image 145/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\damaged-roads-dangerous-vehicles-600w-2195237963.webp: 448x640 1 pothole, 17.3ms
+image 146/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\damaged-turn-road-sign-WTKMBE.jpg: 640x480 (no detections), 16.5ms
+image 147/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\head-down-view-large-pothole-tarmac-street-hole-has-gravel-rocks-you-can-see-lots-cracks-spreading-out-road-262409037.webp: 544x640 1 longitudinal_crack, 2 transverse_cracks, 15.4ms
+image 148/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\highway-traffic-sign-board-500x500.webp: 448x640 1 signboard, 16.4ms
+image 149/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_100_1752853270356-s4f7768gnqjjpeg_-awDV1KGB.webp: 640x480 2 potholes, 3 alligator_cracks, 17.8ms
+image 150/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_101_1752853270356-t2vb1fo1s3jpeg_HoDktO3PBK.webp: 640x480 (no detections), 14.2ms
+image 151/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_102_1754220786880-hzs0rk04wotjpeg_E5VT4mHwi.webp: 640x480 1 pothole, 14.9ms
+image 152/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_103_1754220786810-zi5vk9e268gjpeg_Ogq5oH-Ox.webp: 640x480 1 pothole, 14.0ms
+image 153/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_104_1754220786528-gc133wn4omdjpeg_dqr77_2L46.webp: 640x480 1 alligator_crack, 14.4ms
+image 154/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_105_1754220785678-hkzss4cwvsdjpeg_FozV4-8WK4.webp: 640x480 (no detections), 14.7ms
+image 155/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_106_1754220785677-p579jze80rrjpeg_O7HIe8cSw2.webp: 640x480 (no detections), 17.0ms
+image 156/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_107_1754220786529-3rhbbw8mdcbjpeg_kXrgzoGUpU.webp: 640x480 2 potholes, 14.7ms
+image 157/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_108_1754220785678-yfgk1k0lhsjpeg_dC8T6WNNIx.webp: 640x480 2 potholes, 15.2ms
+image 158/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_109_1750779202731-qsjje8kbrhqjpeg_YR7X6Y9AZk.webp: 640x480 3 potholes, 1 signboard, 15.6ms
+image 159/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_110_1752764656499-gjb32r043zojpeg_3WBltRzQpD.webp: 640x480 1 pothole, 15.9ms
+image 160/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_111_1752764656161-3bnlmsq8fsjjpeg_KrwF30HeS0.webp: 640x480 1 pothole, 13.8ms
+image 161/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_112_1752764656158-opl1e6fllejpeg__8vBMA0mAg.webp: 640x480 2 potholes, 15.0ms
+image 162/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_113_1752764656159-ees839hmolljpeg_jinybpO0r6.webp: 640x480 4 potholes, 13.5ms
+image 163/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_114_1752764655508-9eial6hlr7ijpeg_vVfs_l2eJb.webp: 640x480 1 alligator_crack, 14.5ms
+image 164/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_115_1752764655511-mjz8whs42ajpeg_oXciJT8fE.webp: 640x480 1 pothole, 15.5ms
+image 165/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_116_1752764655510-okqm333930ojpeg_xlB-v9Pl_P.webp: 640x480 3 potholes, 14.3ms
+image 166/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_117_1752764655512-73k8btg6qrhjpeg_CTW3_1cJp.webp: 640x480 2 potholes, 1 alligator_crack, 15.3ms
+image 167/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_118_1752764655509-zrx384toqjpeg_vot3iQGjp.webp: 640x480 (no detections), 17.6ms
+image 168/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_119_1752853396242-ijqwhldosjjjpeg_Z0hbAn-CcH.webp: 640x480 4 potholes, 14.7ms
+image 169/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_120_1752853395967-s44ubli7z5jpeg_15cUYAjCqq.webp: 640x480 1 pothole, 14.0ms
+image 170/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_121_1752853396190-g59680gcba5jpeg_eD1SdDmmMl.webp: 640x480 1 pothole, 15.0ms
+image 171/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_122_1752853395971-zr9w235pamljpeg_Y9AtrZ-New.webp: 640x480 5 potholes, 15.3ms
+image 172/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_123_1752853395970-b89cdb5yvctjpeg_oCIZWCJnuK.webp: 640x480 2 potholes, 16.2ms
+image 173/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_124_1752853395969-9opg3efoi5ojpeg_mbv4Gn0eUF.webp: 640x480 4 potholes, 17.4ms
+image 174/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_125_1752853395970-nwnyooh54rjpeg_0me8tSP3W.webp: 640x480 1 pothole, 15.7ms
+image 175/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_126_1752853396320-e9dqt0t4hjjpeg_ZK5CpifZ67.webp: 640x480 4 potholes, 14.8ms
+image 176/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_127_1752853395968-vahfg7v9nocjpeg_0FbIj0O25.webp: 640x480 2 potholes, 14.6ms
+image 177/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_128_1752853338962-t0vvu6d49qjpeg_CrKpXDcWaA.webp: 640x480 1 pothole, 13.6ms
+image 178/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_129_1752853339010-3gpz8wwkaksjpeg_aMEWhquBS8.webp: 640x480 6 potholes, 15.4ms
+image 179/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_130_1752853338631-e9q70bsb16wjpeg_4y3__E5Kjt.webp: 640x480 2 potholes, 14.5ms
+image 180/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_131_1752853338631-l7uiwq7l0hjpeg_AC-gyfjf0.webp: 640x480 10 potholes, 2 alligator_cracks, 15.1ms
+image 181/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_132_1752853338633-yda57qoziyojpeg_H0hKzJelUG.webp: 640x480 1 pothole, 14.9ms
+image 182/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_133_1752853338630-npxg38yepqjpeg_4jcI9OqPi.webp: 640x480 2 potholes, 15.1ms
+image 183/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_134_1752853338629-poqng0lvxcljpeg_I70aoRwVGP.webp: 640x480 (no detections), 14.8ms
+image 184/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_135_1752853338630-kde2ctf832jpeg_uCf-qBB3LO.webp: 640x480 1 pothole, 16.1ms
+image 185/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_136_1752853338632-32dp025vlfsjpeg_bWfsEJmpsG.webp: 640x480 5 potholes, 1 alligator_crack, 15.9ms
+image 186/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_137_1752853270355-yspfmvdcyvjpeg_moVfh-xArq.webp: 640x480 2 potholes, 14.6ms
+image 187/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_138_1752853270356-8fx4i30rnojpeg_p1DZ-W8hzr.webp: 640x480 1 pothole, 16.8ms
+image 188/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_139_1752853270355-ifmodmnqatojpeg_WjFkCd_2a.webp: 640x480 2 potholes, 1 alligator_crack, 15.4ms
+image 189/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_140_1752853270425-7mflun9xl3ijpeg_ri0db-r3ln.webp: 640x480 (no detections), 15.4ms
+image 190/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_141_1752853270352-sn36m7mixedjpeg_OgPrPvtPX.webp: 640x480 3 potholes, 15.4ms
+image 191/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_142_1752853270356-yaroku447i9jpeg_4e4EibIZ7F.webp: 640x480 1 pothole, 16.7ms
+image 192/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_143_1752853270356-s4f7768gnqjjpeg_-awDV1KGB.webp: 640x480 2 potholes, 3 alligator_cracks, 15.9ms
+image 193/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_144_1752853270356-t2vb1fo1s3jpeg_HoDktO3PBK.webp: 640x480 (no detections), 13.9ms
+image 194/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_145_1754220786880-hzs0rk04wotjpeg_E5VT4mHwi.webp: 640x480 1 pothole, 14.8ms
+image 195/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_146_1754220786810-zi5vk9e268gjpeg_Ogq5oH-Ox.webp: 640x480 1 pothole, 15.9ms
+image 196/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_147_1754220786528-gc133wn4omdjpeg_dqr77_2L46.webp: 640x480 2 potholes, 1 alligator_crack, 15.1ms
+image 197/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_148_1754220785678-hkzss4cwvsdjpeg_FozV4-8WK4.webp: 640x480 (no detections), 16.7ms
+image 198/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_149_1754220785677-p579jze80rrjpeg_O7HIe8cSw2.webp: 640x480 1 pothole, 16.2ms
+image 199/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_150_1754220786529-3rhbbw8mdcbjpeg_kXrgzoGUpU.webp: 640x480 1 pothole, 17.4ms
+image 200/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_151_1754220785678-yfgk1k0lhsjpeg_dC8T6WNNIx.webp: 640x480 (no detections), 14.3ms
+image 201/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_152_1750779202731-qsjje8kbrhqjpeg_YR7X6Y9AZk.webp: 640x480 2 potholes, 1 signboard, 18.5ms
+image 202/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_153_1750779202731-qsjje8kbrhqjpeg_YR7X6Y9AZk.webp: 640x480 2 potholes, 2 signboards, 15.2ms
+image 203/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_154_1750779202731-qsjje8kbrhqjpeg_YR7X6Y9AZk.webp: 640x480 3 potholes, 1 signboard, 14.9ms
+image 204/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_155_1750779202731-qsjje8kbrhqjpeg_YR7X6Y9AZk.webp: 640x480 2 potholes, 1 signboard, 14.1ms
+image 205/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_156_1750779202731-qsjje8kbrhqjpeg_YR7X6Y9AZk.webp: 640x480 3 potholes, 1 signboard, 14.4ms
+image 206/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_157_1750779202731-qsjje8kbrhqjpeg_YR7X6Y9AZk.webp: 640x480 3 potholes, 1 signboard, 15.7ms
+image 207/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_158_1752764656499-gjb32r043zojpeg_3WBltRzQpD.webp: 640x480 1 pothole, 17.9ms
+image 208/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_159_1752764656499-gjb32r043zojpeg_3WBltRzQpD.webp: 640x480 1 pothole, 15.8ms
+image 209/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_160_1752764656499-gjb32r043zojpeg_3WBltRzQpD.webp: 640x480 1 pothole, 15.1ms
+image 210/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_161_1752764656499-gjb32r043zojpeg_3WBltRzQpD.webp: 640x480 1 pothole, 14.5ms
+image 211/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_162_1752764656499-gjb32r043zojpeg_3WBltRzQpD.webp: 640x480 1 pothole, 14.7ms
+image 212/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_163_1752764656499-gjb32r043zojpeg_3WBltRzQpD.webp: 640x480 1 pothole, 14.2ms
+image 213/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_164_1752764656161-3bnlmsq8fsjjpeg_KrwF30HeS0.webp: 640x480 1 pothole, 18.2ms
+image 214/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_165_1752764656161-3bnlmsq8fsjjpeg_KrwF30HeS0.webp: 640x480 1 pothole, 14.7ms
+image 215/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_166_1752764656161-3bnlmsq8fsjjpeg_KrwF30HeS0.webp: 640x480 1 pothole, 14.1ms
+image 216/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_167_1752764656161-3bnlmsq8fsjjpeg_KrwF30HeS0.webp: 640x480 1 pothole, 14.1ms
+image 217/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_168_1752764656161-3bnlmsq8fsjjpeg_KrwF30HeS0.webp: 640x480 1 pothole, 16.7ms
+image 218/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_169_1752764656161-3bnlmsq8fsjjpeg_KrwF30HeS0.webp: 640x480 1 pothole, 14.8ms
+image 219/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_170_1752764656158-opl1e6fllejpeg__8vBMA0mAg.webp: 640x480 1 pothole, 16.8ms
+image 220/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_171_1752764656158-opl1e6fllejpeg__8vBMA0mAg.webp: 640x480 2 potholes, 14.9ms
+image 221/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_172_1752764656158-opl1e6fllejpeg__8vBMA0mAg.webp: 640x480 2 potholes, 16.3ms
+image 222/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_173_1752764656158-opl1e6fllejpeg__8vBMA0mAg.webp: 640x480 3 potholes, 1 alligator_crack, 14.1ms
+image 223/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_174_1752764656158-opl1e6fllejpeg__8vBMA0mAg.webp: 640x480 2 potholes, 14.8ms
+image 224/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_175_1752764656158-opl1e6fllejpeg__8vBMA0mAg.webp: 640x480 2 potholes, 14.1ms
+image 225/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_176_1752764656159-ees839hmolljpeg_jinybpO0r6.webp: 640x480 1 pothole, 17.6ms
+image 226/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_177_1752764656159-ees839hmolljpeg_jinybpO0r6.webp: 640x480 1 pothole, 17.3ms
+image 227/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_178_1752764656159-ees839hmolljpeg_jinybpO0r6.webp: 640x480 2 potholes, 15.0ms
+image 228/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_179_1752764656159-ees839hmolljpeg_jinybpO0r6.webp: 640x480 1 pothole, 13.7ms
+image 229/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_180_1752764656159-ees839hmolljpeg_jinybpO0r6.webp: 640x480 4 potholes, 14.7ms
+image 230/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_181_1752764656159-ees839hmolljpeg_jinybpO0r6.webp: 640x480 4 potholes, 14.3ms
+image 231/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_182_1752764655508-9eial6hlr7ijpeg_vVfs_l2eJb.webp: 640x480 1 alligator_crack, 16.6ms
+image 232/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_183_1752764655508-9eial6hlr7ijpeg_vVfs_l2eJb.webp: 640x480 1 alligator_crack, 14.8ms
+image 233/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_184_1752764655508-9eial6hlr7ijpeg_vVfs_l2eJb.webp: 640x480 1 alligator_crack, 14.5ms
+image 234/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_185_1752764655508-9eial6hlr7ijpeg_vVfs_l2eJb.webp: 640x480 1 alligator_crack, 14.9ms
+image 235/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_186_1752764655508-9eial6hlr7ijpeg_vVfs_l2eJb.webp: 640x480 1 alligator_crack, 14.5ms
+image 236/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_187_1752764655508-9eial6hlr7ijpeg_vVfs_l2eJb.webp: 640x480 1 alligator_crack, 14.2ms
+image 237/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_188_1752764655511-mjz8whs42ajpeg_oXciJT8fE.webp: 640x480 1 pothole, 18.9ms
+image 238/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_189_1752764655511-mjz8whs42ajpeg_oXciJT8fE.webp: 640x480 1 pothole, 16.6ms
+image 239/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_190_1752764655511-mjz8whs42ajpeg_oXciJT8fE.webp: 640x480 1 pothole, 16.3ms
+image 240/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_191_1752764655511-mjz8whs42ajpeg_oXciJT8fE.webp: 640x480 (no detections), 18.0ms
+image 241/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_192_1752764655511-mjz8whs42ajpeg_oXciJT8fE.webp: 640x480 1 pothole, 14.6ms
+image 242/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_193_1752764655511-mjz8whs42ajpeg_oXciJT8fE.webp: 640x480 1 pothole, 15.3ms
+image 243/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_194_1752764655510-okqm333930ojpeg_xlB-v9Pl_P.webp: 640x480 3 potholes, 18.0ms
+image 244/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_195_1752764655510-okqm333930ojpeg_xlB-v9Pl_P.webp: 640x480 3 potholes, 16.5ms
+image 245/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_196_1752764655510-okqm333930ojpeg_xlB-v9Pl_P.webp: 640x480 4 potholes, 18.1ms
+image 246/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_197_1752764655510-okqm333930ojpeg_xlB-v9Pl_P.webp: 640x480 4 potholes, 14.3ms
+image 247/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_198_1752764655510-okqm333930ojpeg_xlB-v9Pl_P.webp: 640x480 3 potholes, 14.6ms
+image 248/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_199_1752764655510-okqm333930ojpeg_xlB-v9Pl_P.webp: 640x480 3 potholes, 14.7ms
+image 249/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_200_1752764655512-73k8btg6qrhjpeg_CTW3_1cJp.webp: 640x480 2 potholes, 1 alligator_crack, 16.3ms
+image 250/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_201_1752764655512-73k8btg6qrhjpeg_CTW3_1cJp.webp: 640x480 2 potholes, 1 alligator_crack, 14.5ms
+image 251/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_202_1752764655512-73k8btg6qrhjpeg_CTW3_1cJp.webp: 640x480 1 alligator_crack, 14.1ms
+image 252/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_203_1752764655512-73k8btg6qrhjpeg_CTW3_1cJp.webp: 640x480 2 potholes, 1 alligator_crack, 15.0ms
+image 253/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_204_1752764655512-73k8btg6qrhjpeg_CTW3_1cJp.webp: 640x480 2 potholes, 1 alligator_crack, 15.6ms
+image 254/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_205_1752764655512-73k8btg6qrhjpeg_CTW3_1cJp.webp: 640x480 2 potholes, 1 alligator_crack, 13.9ms
+image 255/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_206_1752764655509-zrx384toqjpeg_vot3iQGjp.webp: 640x480 (no detections), 16.3ms
+image 256/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_207_1752764655509-zrx384toqjpeg_vot3iQGjp.webp: 640x480 (no detections), 16.9ms
+image 257/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_208_1752764655509-zrx384toqjpeg_vot3iQGjp.webp: 640x480 (no detections), 15.8ms
+image 258/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_209_1752764655509-zrx384toqjpeg_vot3iQGjp.webp: 640x480 (no detections), 17.5ms
+image 259/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_210_1752764655509-zrx384toqjpeg_vot3iQGjp.webp: 640x480 (no detections), 14.6ms
+image 260/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_211_1752764655509-zrx384toqjpeg_vot3iQGjp.webp: 640x480 (no detections), 15.2ms
+image 261/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_212_1752853396242-ijqwhldosjjjpeg_Z0hbAn-CcH.webp: 640x480 2 potholes, 17.2ms
+image 262/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_213_1752853396242-ijqwhldosjjjpeg_Z0hbAn-CcH.webp: 640x480 2 potholes, 16.4ms
+image 263/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_214_1752853396242-ijqwhldosjjjpeg_Z0hbAn-CcH.webp: 640x480 3 potholes, 15.5ms
+image 264/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_215_1752853396242-ijqwhldosjjjpeg_Z0hbAn-CcH.webp: 640x480 3 potholes, 15.0ms
+image 265/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_216_1752853396242-ijqwhldosjjjpeg_Z0hbAn-CcH.webp: 640x480 4 potholes, 13.8ms
+image 266/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_217_1752853396242-ijqwhldosjjjpeg_Z0hbAn-CcH.webp: 640x480 4 potholes, 15.6ms
+image 267/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_218_1752853395967-s44ubli7z5jpeg_15cUYAjCqq.webp: 640x480 2 potholes, 16.3ms
+image 268/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_219_1752853395967-s44ubli7z5jpeg_15cUYAjCqq.webp: 640x480 2 potholes, 15.3ms
+image 269/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_220_1752853395967-s44ubli7z5jpeg_15cUYAjCqq.webp: 640x480 2 potholes, 14.5ms
+image 270/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_221_1752853395967-s44ubli7z5jpeg_15cUYAjCqq.webp: 640x480 2 potholes, 14.8ms
+image 271/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_222_1752853395967-s44ubli7z5jpeg_15cUYAjCqq.webp: 640x480 1 pothole, 15.2ms
+image 272/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_223_1752853395967-s44ubli7z5jpeg_15cUYAjCqq.webp: 640x480 1 pothole, 13.4ms
+image 273/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_224_1752853396190-g59680gcba5jpeg_eD1SdDmmMl.webp: 640x480 1 pothole, 17.7ms
+image 274/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_225_1752853396190-g59680gcba5jpeg_eD1SdDmmMl.webp: 640x480 1 pothole, 14.4ms
+image 275/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_226_1752853396190-g59680gcba5jpeg_eD1SdDmmMl.webp: 640x480 1 pothole, 16.6ms
+image 276/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_227_1752853396190-g59680gcba5jpeg_eD1SdDmmMl.webp: 640x480 2 potholes, 16.5ms
+image 277/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_228_1752853396190-g59680gcba5jpeg_eD1SdDmmMl.webp: 640x480 1 pothole, 15.0ms
+image 278/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_229_1752853396190-g59680gcba5jpeg_eD1SdDmmMl.webp: 640x480 1 pothole, 17.5ms
+image 279/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_230_1752853395971-zr9w235pamljpeg_Y9AtrZ-New.webp: 640x480 5 potholes, 15.1ms
+image 280/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_231_1752853395971-zr9w235pamljpeg_Y9AtrZ-New.webp: 640x480 6 potholes, 17.4ms
+image 281/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_232_1752853395971-zr9w235pamljpeg_Y9AtrZ-New.webp: 640x480 6 potholes, 18.8ms
+image 282/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_233_1752853395971-zr9w235pamljpeg_Y9AtrZ-New.webp: 640x480 9 potholes, 17.4ms
+image 283/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_234_1752853395971-zr9w235pamljpeg_Y9AtrZ-New.webp: 640x480 5 potholes, 15.4ms
+image 284/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_235_1752853395971-zr9w235pamljpeg_Y9AtrZ-New.webp: 640x480 5 potholes, 16.1ms
+image 285/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_236_1752853395970-b89cdb5yvctjpeg_oCIZWCJnuK.webp: 640x480 1 pothole, 16.9ms
+image 286/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_237_1752853395970-b89cdb5yvctjpeg_oCIZWCJnuK.webp: 640x480 2 potholes, 20.5ms
+image 287/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_238_1752853395970-b89cdb5yvctjpeg_oCIZWCJnuK.webp: 640x480 2 potholes, 15.2ms
+image 288/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_239_1752853395970-b89cdb5yvctjpeg_oCIZWCJnuK.webp: 640x480 1 pothole, 15.9ms
+image 289/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_240_1752853395970-b89cdb5yvctjpeg_oCIZWCJnuK.webp: 640x480 2 potholes, 20.9ms
+image 290/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_241_1752853395970-b89cdb5yvctjpeg_oCIZWCJnuK.webp: 640x480 2 potholes, 17.6ms
+image 291/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_242_1752853395969-9opg3efoi5ojpeg_mbv4Gn0eUF.webp: 640x480 4 potholes, 18.4ms
+image 292/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_243_1752853395969-9opg3efoi5ojpeg_mbv4Gn0eUF.webp: 640x480 4 potholes, 16.5ms
+image 293/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_244_1752853395969-9opg3efoi5ojpeg_mbv4Gn0eUF.webp: 640x480 4 potholes, 17.2ms
+image 294/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_245_1752853395969-9opg3efoi5ojpeg_mbv4Gn0eUF.webp: 640x480 4 potholes, 15.4ms
+image 295/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_246_1752853395969-9opg3efoi5ojpeg_mbv4Gn0eUF.webp: 640x480 4 potholes, 14.3ms
+image 296/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_247_1752853395969-9opg3efoi5ojpeg_mbv4Gn0eUF.webp: 640x480 4 potholes, 14.9ms
+image 297/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_248_1752853395970-nwnyooh54rjpeg_0me8tSP3W.webp: 640x480 (no detections), 19.1ms
+image 298/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_249_1752853395970-nwnyooh54rjpeg_0me8tSP3W.webp: 640x480 2 potholes, 17.6ms
+image 299/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_250_1752853395970-nwnyooh54rjpeg_0me8tSP3W.webp: 640x480 2 potholes, 15.1ms
+image 300/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_251_1752853395970-nwnyooh54rjpeg_0me8tSP3W.webp: 640x480 2 potholes, 19.3ms
+image 301/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_252_1752853395970-nwnyooh54rjpeg_0me8tSP3W.webp: 640x480 1 pothole, 16.4ms
+image 302/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_253_1752853395970-nwnyooh54rjpeg_0me8tSP3W.webp: 640x480 1 pothole, 16.2ms
+image 303/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_254_1752853396320-e9dqt0t4hjjpeg_ZK5CpifZ67.webp: 640x480 2 potholes, 15.7ms
+image 304/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_255_1752853396320-e9dqt0t4hjjpeg_ZK5CpifZ67.webp: 640x480 2 potholes, 17.3ms
+image 305/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_256_1752853396320-e9dqt0t4hjjpeg_ZK5CpifZ67.webp: 640x480 2 potholes, 17.1ms
+image 306/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_257_1752853396320-e9dqt0t4hjjpeg_ZK5CpifZ67.webp: 640x480 3 potholes, 15.3ms
+image 307/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_258_1752853396320-e9dqt0t4hjjpeg_ZK5CpifZ67.webp: 640x480 4 potholes, 14.9ms
+image 308/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_259_1752853396320-e9dqt0t4hjjpeg_ZK5CpifZ67.webp: 640x480 4 potholes, 14.7ms
+image 309/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_260_1752853395968-vahfg7v9nocjpeg_0FbIj0O25.webp: 640x480 2 potholes, 17.0ms
+image 310/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_261_1752853395968-vahfg7v9nocjpeg_0FbIj0O25.webp: 640x480 2 potholes, 14.9ms
+image 311/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_262_1752853395968-vahfg7v9nocjpeg_0FbIj0O25.webp: 640x480 2 potholes, 16.1ms
+image 312/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_263_1752853395968-vahfg7v9nocjpeg_0FbIj0O25.webp: 640x480 2 potholes, 13.9ms
+image 313/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_264_1752853395968-vahfg7v9nocjpeg_0FbIj0O25.webp: 640x480 2 potholes, 14.4ms
+image 314/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_265_1752853395968-vahfg7v9nocjpeg_0FbIj0O25.webp: 640x480 2 potholes, 14.6ms
+image 315/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_266_1752853338962-t0vvu6d49qjpeg_CrKpXDcWaA.webp: 640x480 1 pothole, 14.8ms
+image 316/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_267_1752853338962-t0vvu6d49qjpeg_CrKpXDcWaA.webp: 640x480 1 pothole, 18.8ms
+image 317/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_268_1752853338962-t0vvu6d49qjpeg_CrKpXDcWaA.webp: 640x480 1 pothole, 17.5ms
+image 318/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_269_1752853338962-t0vvu6d49qjpeg_CrKpXDcWaA.webp: 640x480 1 pothole, 15.1ms
+image 319/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_270_1752853338962-t0vvu6d49qjpeg_CrKpXDcWaA.webp: 640x480 1 pothole, 14.2ms
+image 320/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_271_1752853338962-t0vvu6d49qjpeg_CrKpXDcWaA.webp: 640x480 1 pothole, 14.3ms
+image 321/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_272_1752853339010-3gpz8wwkaksjpeg_aMEWhquBS8.webp: 640x480 4 potholes, 16.6ms
+image 322/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_273_1752853339010-3gpz8wwkaksjpeg_aMEWhquBS8.webp: 640x480 4 potholes, 14.6ms
+image 323/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_274_1752853339010-3gpz8wwkaksjpeg_aMEWhquBS8.webp: 640x480 4 potholes, 14.5ms
+image 324/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_275_1752853339010-3gpz8wwkaksjpeg_aMEWhquBS8.webp: 640x480 3 potholes, 14.5ms
+image 325/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_276_1752853339010-3gpz8wwkaksjpeg_aMEWhquBS8.webp: 640x480 6 potholes, 14.4ms
+image 326/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_277_1752853339010-3gpz8wwkaksjpeg_aMEWhquBS8.webp: 640x480 6 potholes, 14.1ms
+image 327/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_278_1752853338631-e9q70bsb16wjpeg_4y3__E5Kjt.webp: 640x480 1 pothole, 16.2ms
+image 328/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_279_1752853338631-e9q70bsb16wjpeg_4y3__E5Kjt.webp: 640x480 1 pothole, 28.8ms
+image 329/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_280_1752853338631-e9q70bsb16wjpeg_4y3__E5Kjt.webp: 640x480 1 pothole, 12.0ms
+image 330/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_281_1752853338631-e9q70bsb16wjpeg_4y3__E5Kjt.webp: 640x480 2 potholes, 1 other_corruption, 14.2ms
+image 331/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_282_1752853338631-e9q70bsb16wjpeg_4y3__E5Kjt.webp: 640x480 2 potholes, 15.6ms
+image 332/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_283_1752853338631-e9q70bsb16wjpeg_4y3__E5Kjt.webp: 640x480 2 potholes, 14.4ms
+image 333/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_284_1752853338631-l7uiwq7l0hjpeg_AC-gyfjf0.webp: 640x480 9 potholes, 1 alligator_crack, 15.6ms
+image 334/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_285_1752853338631-l7uiwq7l0hjpeg_AC-gyfjf0.webp: 640x480 12 potholes, 2 alligator_cracks, 15.2ms
+image 335/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_286_1752853338631-l7uiwq7l0hjpeg_AC-gyfjf0.webp: 640x480 12 potholes, 1 alligator_crack, 15.1ms
+image 336/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_287_1752853338631-l7uiwq7l0hjpeg_AC-gyfjf0.webp: 640x480 9 potholes, 1 alligator_crack, 14.7ms
+image 337/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_288_1752853338631-l7uiwq7l0hjpeg_AC-gyfjf0.webp: 640x480 10 potholes, 2 alligator_cracks, 13.7ms
+image 338/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_289_1752853338631-l7uiwq7l0hjpeg_AC-gyfjf0.webp: 640x480 10 potholes, 2 alligator_cracks, 15.1ms
+image 339/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_290_1752853338633-yda57qoziyojpeg_H0hKzJelUG.webp: 640x480 1 pothole, 1 alligator_crack, 14.9ms
+image 340/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_291_1752853338633-yda57qoziyojpeg_H0hKzJelUG.webp: 640x480 1 pothole, 17.2ms
+image 341/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_292_1752853338633-yda57qoziyojpeg_H0hKzJelUG.webp: 640x480 1 pothole, 17.1ms
+image 342/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_293_1752853338633-yda57qoziyojpeg_H0hKzJelUG.webp: 640x480 1 pothole, 15.1ms
+image 343/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_294_1752853338633-yda57qoziyojpeg_H0hKzJelUG.webp: 640x480 1 pothole, 17.5ms
+image 344/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_295_1752853338633-yda57qoziyojpeg_H0hKzJelUG.webp: 640x480 1 pothole, 13.9ms
+image 345/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_296_1752853338630-npxg38yepqjpeg_4jcI9OqPi.webp: 640x480 2 potholes, 17.0ms
+image 346/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_297_1752853338630-npxg38yepqjpeg_4jcI9OqPi.webp: 640x480 2 potholes, 15.0ms
+image 347/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_298_1752853338630-npxg38yepqjpeg_4jcI9OqPi.webp: 640x480 2 potholes, 14.4ms
+image 348/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_299_1752853338630-npxg38yepqjpeg_4jcI9OqPi.webp: 640x480 1 pothole, 16.8ms
+image 349/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_300_1752853338630-npxg38yepqjpeg_4jcI9OqPi.webp: 640x480 2 potholes, 15.7ms
+image 350/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_301_1752853338630-npxg38yepqjpeg_4jcI9OqPi.webp: 640x480 2 potholes, 20.2ms
+image 351/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_302_1752853338629-poqng0lvxcljpeg_I70aoRwVGP.webp: 640x480 (no detections), 19.9ms
+image 352/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_303_1752853338629-poqng0lvxcljpeg_I70aoRwVGP.webp: 640x480 (no detections), 19.9ms
+image 353/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_304_1752853338629-poqng0lvxcljpeg_I70aoRwVGP.webp: 640x480 (no detections), 18.3ms
+image 354/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_305_1752853338629-poqng0lvxcljpeg_I70aoRwVGP.webp: 640x480 (no detections), 18.7ms
+image 355/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_306_1752853338629-poqng0lvxcljpeg_I70aoRwVGP.webp: 640x480 (no detections), 18.2ms
+image 356/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_307_1752853338629-poqng0lvxcljpeg_I70aoRwVGP.webp: 640x480 (no detections), 19.3ms
+image 357/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_308_1752853338630-kde2ctf832jpeg_uCf-qBB3LO.webp: 640x480 1 pothole, 20.1ms
+image 358/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_309_1752853338630-kde2ctf832jpeg_uCf-qBB3LO.webp: 640x480 1 pothole, 19.3ms
+image 359/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_310_1752853338630-kde2ctf832jpeg_uCf-qBB3LO.webp: 640x480 1 pothole, 19.4ms
+image 360/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_311_1752853338630-kde2ctf832jpeg_uCf-qBB3LO.webp: 640x480 1 pothole, 18.0ms
+image 361/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_312_1752853338630-kde2ctf832jpeg_uCf-qBB3LO.webp: 640x480 1 pothole, 19.3ms
+image 362/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_313_1752853338630-kde2ctf832jpeg_uCf-qBB3LO.webp: 640x480 1 pothole, 17.9ms
+image 363/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_314_1752853338632-32dp025vlfsjpeg_bWfsEJmpsG.webp: 640x480 2 potholes, 1 alligator_crack, 19.9ms
+image 364/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_315_1752853338632-32dp025vlfsjpeg_bWfsEJmpsG.webp: 640x480 2 potholes, 1 alligator_crack, 17.7ms
+image 365/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_316_1752853338632-32dp025vlfsjpeg_bWfsEJmpsG.webp: 640x480 3 potholes, 1 alligator_crack, 15.8ms
+image 366/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_317_1752853338632-32dp025vlfsjpeg_bWfsEJmpsG.webp: 640x480 3 potholes, 1 alligator_crack, 16.3ms
+image 367/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_318_1752853338632-32dp025vlfsjpeg_bWfsEJmpsG.webp: 640x480 5 potholes, 1 alligator_crack, 16.0ms
+image 368/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_319_1752853338632-32dp025vlfsjpeg_bWfsEJmpsG.webp: 640x480 5 potholes, 1 alligator_crack, 15.0ms
+image 369/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_320_1752853270355-yspfmvdcyvjpeg_moVfh-xArq.webp: 640x480 2 potholes, 16.4ms
+image 370/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_321_1752853270355-yspfmvdcyvjpeg_moVfh-xArq.webp: 640x480 1 pothole, 15.5ms
+image 371/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_322_1752853270355-yspfmvdcyvjpeg_moVfh-xArq.webp: 640x480 2 potholes, 16.0ms
+image 372/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_323_1752853270355-yspfmvdcyvjpeg_moVfh-xArq.webp: 640x480 2 potholes, 13.8ms
+image 373/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_324_1752853270355-yspfmvdcyvjpeg_moVfh-xArq.webp: 640x480 2 potholes, 15.0ms
+image 374/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_325_1752853270355-yspfmvdcyvjpeg_moVfh-xArq.webp: 640x480 2 potholes, 15.4ms
+image 375/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_326_1752853270356-8fx4i30rnojpeg_p1DZ-W8hzr.webp: 640x480 1 pothole, 16.0ms
+image 376/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_327_1752853270356-8fx4i30rnojpeg_p1DZ-W8hzr.webp: 640x480 1 pothole, 17.7ms
+image 377/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_328_1752853270356-8fx4i30rnojpeg_p1DZ-W8hzr.webp: 640x480 1 pothole, 15.5ms
+image 378/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_329_1752853270356-8fx4i30rnojpeg_p1DZ-W8hzr.webp: 640x480 1 pothole, 16.7ms
+image 379/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_330_1752853270356-8fx4i30rnojpeg_p1DZ-W8hzr.webp: 640x480 1 pothole, 14.3ms
+image 380/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_331_1752853270356-8fx4i30rnojpeg_p1DZ-W8hzr.webp: 640x480 1 pothole, 15.5ms
+image 381/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_332_1752853270355-ifmodmnqatojpeg_WjFkCd_2a.webp: 640x480 (no detections), 18.8ms
+image 382/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_333_1752853270355-ifmodmnqatojpeg_WjFkCd_2a.webp: 640x480 1 pothole, 19.5ms
+image 383/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_334_1752853270355-ifmodmnqatojpeg_WjFkCd_2a.webp: 640x480 2 potholes, 1 transverse_crack, 1 alligator_crack, 20.2ms
+image 384/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_335_1752853270355-ifmodmnqatojpeg_WjFkCd_2a.webp: 640x480 2 potholes, 15.7ms
+image 385/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_336_1752853270355-ifmodmnqatojpeg_WjFkCd_2a.webp: 640x480 2 potholes, 1 alligator_crack, 14.2ms
+image 386/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_337_1752853270355-ifmodmnqatojpeg_WjFkCd_2a.webp: 640x480 2 potholes, 1 alligator_crack, 15.7ms
+image 387/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_338_1752853270425-7mflun9xl3ijpeg_ri0db-r3ln.webp: 640x480 (no detections), 16.1ms
+image 388/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_339_1752853270425-7mflun9xl3ijpeg_ri0db-r3ln.webp: 640x480 (no detections), 15.6ms
+image 389/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_340_1752853270425-7mflun9xl3ijpeg_ri0db-r3ln.webp: 640x480 (no detections), 16.2ms
+image 390/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_341_1752853270425-7mflun9xl3ijpeg_ri0db-r3ln.webp: 640x480 (no detections), 15.4ms
+image 391/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_342_1752853270425-7mflun9xl3ijpeg_ri0db-r3ln.webp: 640x480 (no detections), 14.9ms
+image 392/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_343_1752853270425-7mflun9xl3ijpeg_ri0db-r3ln.webp: 640x480 (no detections), 15.3ms
+image 393/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_344_1752853270352-sn36m7mixedjpeg_OgPrPvtPX.webp: 640x480 3 potholes, 17.8ms
+image 394/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_345_1752853270352-sn36m7mixedjpeg_OgPrPvtPX.webp: 640x480 3 potholes, 12.0ms
+image 395/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_346_1752853270352-sn36m7mixedjpeg_OgPrPvtPX.webp: 640x480 2 potholes, 15.6ms
+image 396/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_347_1752853270352-sn36m7mixedjpeg_OgPrPvtPX.webp: 640x480 3 potholes, 18.3ms
+image 397/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_348_1752853270352-sn36m7mixedjpeg_OgPrPvtPX.webp: 640x480 3 potholes, 16.2ms
+image 398/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_349_1752853270352-sn36m7mixedjpeg_OgPrPvtPX.webp: 640x480 3 potholes, 13.9ms
+image 399/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_350_1752853270356-yaroku447i9jpeg_4e4EibIZ7F.webp: 640x480 1 pothole, 15.9ms
+image 400/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_351_1752853270356-yaroku447i9jpeg_4e4EibIZ7F.webp: 640x480 1 pothole, 16.6ms
+image 401/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_352_1752853270356-yaroku447i9jpeg_4e4EibIZ7F.webp: 640x480 1 pothole, 16.4ms
+image 402/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_353_1752853270356-yaroku447i9jpeg_4e4EibIZ7F.webp: 640x480 1 pothole, 14.8ms
+image 403/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_354_1752853270356-yaroku447i9jpeg_4e4EibIZ7F.webp: 640x480 1 pothole, 14.1ms
+image 404/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_355_1752853270356-yaroku447i9jpeg_4e4EibIZ7F.webp: 640x480 1 pothole, 15.9ms
+image 405/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_356_1752853270356-s4f7768gnqjjpeg_-awDV1KGB.webp: 640x480 2 potholes, 2 alligator_cracks, 16.0ms
+image 406/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_357_1752853270356-s4f7768gnqjjpeg_-awDV1KGB.webp: 640x480 2 potholes, 2 alligator_cracks, 16.9ms
+image 407/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_358_1752853270356-s4f7768gnqjjpeg_-awDV1KGB.webp: 640x480 2 potholes, 2 alligator_cracks, 16.3ms
+image 408/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_359_1752853270356-s4f7768gnqjjpeg_-awDV1KGB.webp: 640x480 2 potholes, 3 alligator_cracks, 17.6ms
+image 409/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_360_1752853270356-s4f7768gnqjjpeg_-awDV1KGB.webp: 640x480 2 potholes, 3 alligator_cracks, 14.5ms
+image 410/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_361_1752853270356-s4f7768gnqjjpeg_-awDV1KGB.webp: 640x480 2 potholes, 3 alligator_cracks, 15.4ms
+image 411/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_362_1752853270356-t2vb1fo1s3jpeg_HoDktO3PBK.webp: 640x480 (no detections), 15.6ms
+image 412/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_363_1752853270356-t2vb1fo1s3jpeg_HoDktO3PBK.webp: 640x480 (no detections), 17.1ms
+image 413/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_364_1752853270356-t2vb1fo1s3jpeg_HoDktO3PBK.webp: 640x480 (no detections), 14.6ms
+image 414/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_365_1752853270356-t2vb1fo1s3jpeg_HoDktO3PBK.webp: 640x480 (no detections), 18.5ms
+image 415/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_366_1752853270356-t2vb1fo1s3jpeg_HoDktO3PBK.webp: 640x480 (no detections), 18.7ms
+image 416/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_367_1752853270356-t2vb1fo1s3jpeg_HoDktO3PBK.webp: 640x480 (no detections), 15.6ms
+image 417/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_368_1754220786880-hzs0rk04wotjpeg_E5VT4mHwi.webp: 640x480 (no detections), 15.8ms
+image 418/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_369_1754220786880-hzs0rk04wotjpeg_E5VT4mHwi.webp: 640x480 (no detections), 14.7ms
+image 419/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_370_1754220786880-hzs0rk04wotjpeg_E5VT4mHwi.webp: 640x480 (no detections), 14.2ms
+image 420/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_371_1754220786880-hzs0rk04wotjpeg_E5VT4mHwi.webp: 640x480 1 alligator_crack, 13.8ms
+image 421/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_372_1754220786880-hzs0rk04wotjpeg_E5VT4mHwi.webp: 640x480 1 pothole, 14.2ms
+image 422/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_373_1754220786880-hzs0rk04wotjpeg_E5VT4mHwi.webp: 640x480 1 pothole, 15.4ms
+image 423/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_374_1754220786810-zi5vk9e268gjpeg_Ogq5oH-Ox.webp: 640x480 1 pothole, 16.4ms
+image 424/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_375_1754220786810-zi5vk9e268gjpeg_Ogq5oH-Ox.webp: 640x480 1 pothole, 14.9ms
+image 425/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_376_1754220786810-zi5vk9e268gjpeg_Ogq5oH-Ox.webp: 640x480 1 pothole, 18.5ms
+image 426/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_377_1754220786810-zi5vk9e268gjpeg_Ogq5oH-Ox.webp: 640x480 1 pothole, 16.6ms
+image 427/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_378_1754220786810-zi5vk9e268gjpeg_Ogq5oH-Ox.webp: 640x480 1 pothole, 14.1ms
+image 428/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_379_1754220786810-zi5vk9e268gjpeg_Ogq5oH-Ox.webp: 640x480 1 pothole, 13.7ms
+image 429/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_380_1754220786528-gc133wn4omdjpeg_dqr77_2L46.webp: 640x480 1 alligator_crack, 15.5ms
+image 430/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_381_1754220786528-gc133wn4omdjpeg_dqr77_2L46.webp: 640x480 1 pothole, 1 alligator_crack, 15.0ms
+image 431/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_382_1754220786528-gc133wn4omdjpeg_dqr77_2L46.webp: 640x480 1 alligator_crack, 16.1ms
+image 432/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_383_1754220786528-gc133wn4omdjpeg_dqr77_2L46.webp: 640x480 (no detections), 18.9ms
+image 433/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_384_1754220786528-gc133wn4omdjpeg_dqr77_2L46.webp: 640x480 2 potholes, 1 alligator_crack, 18.2ms
+image 434/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_385_1754220786528-gc133wn4omdjpeg_dqr77_2L46.webp: 640x480 2 potholes, 1 alligator_crack, 15.0ms
+image 435/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_386_1754220785678-hkzss4cwvsdjpeg_FozV4-8WK4.webp: 640x480 (no detections), 15.0ms
+image 436/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_387_1754220785678-hkzss4cwvsdjpeg_FozV4-8WK4.webp: 640x480 (no detections), 17.7ms
+image 437/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_388_1754220785678-hkzss4cwvsdjpeg_FozV4-8WK4.webp: 640x480 (no detections), 18.2ms
+image 438/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_389_1754220785678-hkzss4cwvsdjpeg_FozV4-8WK4.webp: 640x480 (no detections), 14.5ms
+image 439/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_390_1754220785678-hkzss4cwvsdjpeg_FozV4-8WK4.webp: 640x480 (no detections), 15.6ms
+image 440/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_391_1754220785678-hkzss4cwvsdjpeg_FozV4-8WK4.webp: 640x480 (no detections), 17.3ms
+image 441/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_392_1754220785677-p579jze80rrjpeg_O7HIe8cSw2.webp: 640x480 (no detections), 16.4ms
+image 442/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_393_1754220785677-p579jze80rrjpeg_O7HIe8cSw2.webp: 640x480 (no detections), 16.3ms
+image 443/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_394_1754220785677-p579jze80rrjpeg_O7HIe8cSw2.webp: 640x480 1 pothole, 16.0ms
+image 444/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_395_1754220785677-p579jze80rrjpeg_O7HIe8cSw2.webp: 640x480 1 pothole, 10.8ms
+image 445/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_396_1754220785677-p579jze80rrjpeg_O7HIe8cSw2.webp: 640x480 1 pothole, 12.7ms
+image 446/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_397_1754220785677-p579jze80rrjpeg_O7HIe8cSw2.webp: 640x480 1 pothole, 17.0ms
+image 447/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_398_1754220786529-3rhbbw8mdcbjpeg_kXrgzoGUpU.webp: 640x480 1 pothole, 16.8ms
+image 448/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_399_1754220786529-3rhbbw8mdcbjpeg_kXrgzoGUpU.webp: 640x480 1 pothole, 18.0ms
+image 449/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_400_1754220786529-3rhbbw8mdcbjpeg_kXrgzoGUpU.webp: 640x480 1 pothole, 16.3ms
+image 450/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_401_1754220786529-3rhbbw8mdcbjpeg_kXrgzoGUpU.webp: 640x480 1 pothole, 14.7ms
+image 451/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_402_1754220786529-3rhbbw8mdcbjpeg_kXrgzoGUpU.webp: 640x480 1 pothole, 14.4ms
+image 452/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_403_1754220786529-3rhbbw8mdcbjpeg_kXrgzoGUpU.webp: 640x480 1 pothole, 15.0ms
+image 453/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_404_1754220785678-yfgk1k0lhsjpeg_dC8T6WNNIx.webp: 640x480 2 potholes, 17.3ms
+image 454/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_405_1754220785678-yfgk1k0lhsjpeg_dC8T6WNNIx.webp: 640x480 1 pothole, 15.1ms
+image 455/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_406_1754220785678-yfgk1k0lhsjpeg_dC8T6WNNIx.webp: 640x480 1 pothole, 15.6ms
+image 456/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_407_1754220785678-yfgk1k0lhsjpeg_dC8T6WNNIx.webp: 640x480 2 potholes, 14.5ms
+image 457/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_408_1754220785678-yfgk1k0lhsjpeg_dC8T6WNNIx.webp: 640x480 (no detections), 9.3ms
+image 458/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_409_1754220785678-yfgk1k0lhsjpeg_dC8T6WNNIx.webp: 640x480 (no detections), 17.1ms
+image 459/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_66_1750779202731-qsjje8kbrhqjpeg_YR7X6Y9AZk.webp: 640x480 3 potholes, 1 signboard, 15.6ms
+image 460/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_67_1752764656499-gjb32r043zojpeg_3WBltRzQpD.webp: 640x480 2 potholes, 15.9ms
+image 461/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_68_1752764656161-3bnlmsq8fsjjpeg_KrwF30HeS0.webp: 640x480 1 pothole, 15.1ms
+image 462/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_69_1752764656158-opl1e6fllejpeg__8vBMA0mAg.webp: 640x480 2 potholes, 14.7ms
+image 463/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_70_1752764656159-ees839hmolljpeg_jinybpO0r6.webp: 640x480 2 potholes, 14.1ms
+image 464/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_71_1752764655508-9eial6hlr7ijpeg_vVfs_l2eJb.webp: 640x480 1 alligator_crack, 12.5ms
+image 465/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_72_1752764655511-mjz8whs42ajpeg_oXciJT8fE.webp: 640x480 1 pothole, 17.2ms
+image 466/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_73_1752764655510-okqm333930ojpeg_xlB-v9Pl_P.webp: 640x480 3 potholes, 17.6ms
+image 467/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_74_1752764655512-73k8btg6qrhjpeg_CTW3_1cJp.webp: 640x480 2 potholes, 14.3ms
+image 468/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_75_1752764655509-zrx384toqjpeg_vot3iQGjp.webp: 640x480 1 pothole, 15.2ms
+image 469/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_76_1752853396242-ijqwhldosjjjpeg_Z0hbAn-CcH.webp: 640x480 4 potholes, 13.7ms
+image 470/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_77_1752853395967-s44ubli7z5jpeg_15cUYAjCqq.webp: 640x480 1 pothole, 14.1ms
+image 471/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_78_1752853396190-g59680gcba5jpeg_eD1SdDmmMl.webp: 640x480 1 pothole, 14.8ms
+image 472/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_79_1752853395971-zr9w235pamljpeg_Y9AtrZ-New.webp: 640x480 8 potholes, 14.9ms
+image 473/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_80_1752853395970-b89cdb5yvctjpeg_oCIZWCJnuK.webp: 640x480 2 potholes, 16.0ms
+image 474/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_81_1752853395969-9opg3efoi5ojpeg_mbv4Gn0eUF.webp: 640x480 4 potholes, 14.3ms
+image 475/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_82_1752853395970-nwnyooh54rjpeg_0me8tSP3W.webp: 640x480 2 potholes, 25.6ms
+image 476/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_83_1752853396320-e9dqt0t4hjjpeg_ZK5CpifZ67.webp: 640x480 2 potholes, 13.8ms
+image 477/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_84_1752853395968-vahfg7v9nocjpeg_0FbIj0O25.webp: 640x480 2 potholes, 13.6ms
+image 478/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_85_1752853338962-t0vvu6d49qjpeg_CrKpXDcWaA.webp: 640x480 1 pothole, 14.0ms
+image 479/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_86_1752853339010-3gpz8wwkaksjpeg_aMEWhquBS8.webp: 640x480 4 potholes, 13.7ms
+image 480/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_87_1752853338631-e9q70bsb16wjpeg_4y3__E5Kjt.webp: 640x480 2 potholes, 1 other_corruption, 14.6ms
+image 481/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_88_1752853338631-l7uiwq7l0hjpeg_AC-gyfjf0.webp: 640x480 9 potholes, 2 alligator_cracks, 15.8ms
+image 482/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_89_1752853338633-yda57qoziyojpeg_H0hKzJelUG.webp: 640x480 1 pothole, 14.1ms
+image 483/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_90_1752853338630-npxg38yepqjpeg_4jcI9OqPi.webp: 640x480 2 potholes, 14.5ms
+image 484/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_91_1752853338629-poqng0lvxcljpeg_I70aoRwVGP.webp: 640x480 (no detections), 14.7ms
+image 485/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_92_1752853338630-kde2ctf832jpeg_uCf-qBB3LO.webp: 640x480 1 pothole, 17.9ms
+image 486/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_93_1752853338632-32dp025vlfsjpeg_bWfsEJmpsG.webp: 640x480 3 potholes, 1 alligator_crack, 15.1ms
+image 487/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_94_1752853270355-yspfmvdcyvjpeg_moVfh-xArq.webp: 640x480 2 potholes, 16.1ms
+image 488/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_95_1752853270356-8fx4i30rnojpeg_p1DZ-W8hzr.webp: 640x480 1 pothole, 14.4ms
+image 489/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_96_1752853270355-ifmodmnqatojpeg_WjFkCd_2a.webp: 640x480 2 potholes, 1 alligator_crack, 14.4ms
+image 490/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_97_1752853270425-7mflun9xl3ijpeg_ri0db-r3ln.webp: 640x480 (no detections), 14.7ms
+image 491/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_98_1752853270352-sn36m7mixedjpeg_OgPrPvtPX.webp: 640x480 3 potholes, 14.2ms
+image 492/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\imgi_99_1752853270356-yaroku447i9jpeg_4e4EibIZ7F.webp: 640x480 1 pothole, 15.7ms
+image 493/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\istockphoto-1249816801-1024x1024.jpg: 448x640 1 pothole, 1 alligator_crack, 19.0ms
+image 494/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\istockphoto-1305042923-612x612.jpg: 448x640 1 signboard, 15.6ms
+image 495/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\istockphoto-177316886-1024x1024.jpg: 448x640 1 signboard, 17.9ms
+image 496/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\kota-rajasthan-india-8-december-260nw-1590996976.webp: 544x640 2 potholes, 1 signboard, 18.4ms
+image 497/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\large-pothole-asphalt-road-surface-hole-country-selective-focus-380309003.webp: 640x448 3 potholes, 2 alligator_cracks, 58.5ms
+image 498/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\national-highway-scenic-view-of-indian-road-highways-with-traffic-sign-boards-and-blue-sky-2HC2TYG.jpg: 480x640 1 signboard, 17.1ms
+image 499/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\pothole-in-an-asphalt-road-filled-with-rain-water-in-england-uk-damaged-road-surface-road-in-need-or-repair-large-potholes-big-pothole-MBPAPE.jpg: 512x640 (no detections), 17.9ms
+image 500/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\pothole-in-the-road-filled-with-water-GEXPWT.jpg: 480x640 1 pothole, 18.8ms
+image 501/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\potholes-are-visible-on-a-city-street-highlighting-the-urgent-need-for-road-repairs-to-ensure-safety-for-vehicles-and-pedestrians-photo.jpg: 448x640 4 potholes, 15.6ms
+image 502/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\pune-potholes.webp: 384x640 6 potholes, 15.7ms
+image 503/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\road-markings-pedestrian-crossing-zebra-600w-2207731463.webp: 448x640 1 alligator_crack, 16.9ms
+image 504/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\road-sign-board-1000x1000.jpg: 640x640 2 transverse_cracks, 15.3ms
+image 505/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\road-traffic-cautionary-signs-showing-accident-zone-ahead-india-FFYFDE.jpg: 480x640 1 signboard, 15.8ms
+image 506/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\safety-sign-board-500x500.webp: 640x608 2 signboards, 60.4ms
+image 507/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\stock-photo-a-pothole-in-the-road-a-round-hole-in-the-ground-729680203.jpg: 480x640 3 potholes, 1 alligator_crack, 16.4ms
+image 508/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\the-texture-of-cracked-old-asphalt-large-pothole-in-country-asphalt-road-free-photo.jpg: 480x640 2 potholes, 3 longitudinal_cracks, 3 transverse_cracks, 1 alligator_crack, 17.5ms
+image 509/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\traffic-sign-board-1000x1000.webp: 640x480 2 signboards, 10.9ms
+image 510/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\traffic-signal-and-cctv-cameras-on-indian-national-highway-for-security-india-2D7Y67A.jpg: 480x640 2 signboards, 20.3ms
+image 511/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\vijayapura-karnataka-november-26-2021-overtaking-prohibited-sign-board-on-national-highway-218-free-photo.jpg: 448x640 1 signboard, 21.4ms
+image 512/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\waterlogged-hole-on-the-old-road-free-photo.jpg: 448x640 2 potholes, 17.8ms
+image 513/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\whatsapp-image-2024-10-22-at-6-11-14-pm-500x500.webp: 640x384 1 signboard, 19.2ms
+image 514/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\why-is-it-important-to-look-out-for-potholes.jpg: 448x640 3 potholes, 1 alligator_crack, 19.8ms
+image 515/515 E:\SIH 26124 ph tracker\dataset\test-data\Images\zebra-crossing-on-new-delhi-600w-302864645.webp: 448x640 (no detections), 18.3ms
+Speed: 2.2ms preprocess, 16.0ms inference, 1.9ms postprocess per image at shape (1, 3, 448, 640)
+Results saved to E:\SIH 26124 ph tracker\ML layer\runs\detect\predict-15
+ Learn more at https://docs.ultralytics.com/modes/predict
+VS Code: view Ultralytics VS Code Extension  at https://docs.ultralytics.com/integrations/vscode
+(venv) PS E:\SIH 26124 ph tracker\ML layer> ls                                                                                                                                                                                                                              
