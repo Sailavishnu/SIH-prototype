@@ -1,0 +1,1 @@
+yolo detect predict model="E:\SIH 26124 ph tracker\ML layer\runs\detect\runs\detect\combined9_yolo11s_640_20ep\weights\best.pt" source="E:\SIH 26124 ph tracker\dataset\test-data\Images" imgsz=640 conf=0.10 iou=0.50 save=True
