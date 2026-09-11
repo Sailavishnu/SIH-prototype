@@ -1049,3 +1049,5 @@ Results saved to E:\SIH 26124 ph tracker\ML layer\runs\detect\predict-15
  Learn more at https://docs.ultralytics.com/modes/predict
 VS Code: view Ultralytics VS Code Extension  at https://docs.ultralytics.com/integrations/vscode
 (venv) PS E:\SIH 26124 ph tracker\ML layer> ls                                                                                                                                                                                                                              
+
+https://drive.google.com/drive/folders/1n3dL0R4DqOwCSkOnzR4RNUvKr36eWuza?usp=sharing
