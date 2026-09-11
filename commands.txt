@@ -1,1 +1,525 @@
 yolo detect predict model="E:\SIH 26124 ph tracker\ML layer\runs\detect\runs\detect\combined9_yolo11s_640_20ep\weights\best.pt" source="E:\SIH 26124 ph tracker\dataset\test-data\Images" imgsz=640 conf=0.10 iou=0.50 save=True
+
+
+//
+Yes — this is a **very important distinction**. Since the same trained `YOLO11s` model detects better on laptop images but performs worse on **Jetson + GStreamer video frames**, the first thing I would investigate is **not retraining**.
+
+The model may be fine. The **input reaching the model on Jetson is probably different from the laptop image input**.
+
+### First, let's isolate the problem
+
+Your pipeline is roughly:
+
+```text
+Camera / Video
+      ↓
+   GStreamer
+      ↓
+Frame extraction
+      ↓
+Resize / preprocessing
+      ↓
+YOLO11s
+      ↓
+Confidence / NMS
+      ↓
+Detection JSON
+```
+
+You need to determine **which stage changes the image**.
+
+#### Most likely causes
+
+| Cause                  | What can happen                                     |
+| ---------------------- | --------------------------------------------------- |
+| GStreamer resolution   | Frame reaching YOLO is much smaller                 |
+| GStreamer pixel format | RGB/BGR conversion is incorrect                     |
+| Resize                 | Potholes become too small                           |
+| Letterboxing           | Different from laptop inference                     |
+| FPS/frame skipping     | Important frames are skipped                        |
+| CLAHE                  | Contrast changes compared with training             |
+| Normalization          | Input distribution changes                          |
+| TensorRT               | FP16/INT8 can slightly affect results               |
+| Confidence threshold   | Valid detections get filtered                       |
+| IoU/NMS                | Duplicate/valid detections suppressed               |
+| Camera exposure        | Jetson camera image differs from test images        |
+| Video compression      | Details disappear                                   |
+| Wrong model            | Jetson may not actually be using the same `best.pt` |
+
+---
+
+## 1. First check: are you using exactly the same model?
+
+On the Jetson, verify the model file.
+
+Your laptop model was:
+
+```text
+combined9_yolo11s_640_20ep
+└── weights
+    └── best.pt
+```
+
+If you converted that model to TensorRT, you may have something like:
+
+```text
+best.engine
+```
+
+Make sure the `.engine` was generated **from this exact `best.pt`**, not from:
+
+```text
+yolo11s.pt
+```
+
+or
+
+```text
+last.pt
+```
+
+or another training run.
+
+---
+
+# 2. Most important test: save ONE GStreamer frame
+
+This is what I would do **before changing anything else**.
+
+Take one frame that Jetson is sending into YOLO and save it as:
+
+```text
+jetson_frame.jpg
+```
+
+Then send **that exact frame** to your laptop model.
+
+For example:
+
+```text
+GStreamer
+   ↓
+jetson_frame.jpg
+   ↓
+YOLO11s best.pt
+```
+
+If the laptop now also detects poorly:
+
+> **The problem is the GStreamer/camera/preprocessing input.**
+
+If the laptop detects it correctly but Jetson doesn't:
+
+> **The problem is the Jetson inference/conversion/postprocessing pipeline.**
+
+This single test will save you a LOT of time.
+
+---
+
+## 3. Compare the actual frame
+
+Upload **one frame captured directly from Jetson/GStreamer** here if you can.
+
+I can then help you compare what the model is actually receiving versus the images where your laptop model performs well.
+
+More importantly, if you can provide the **GStreamer frame and the corresponding original image/video frame**, we can determine whether the difference is coming from the frame extraction.
+
+---
+
+# 4. Check your GStreamer resolution
+
+Suppose your camera is:
+
+```text
+1920 × 1080
+```
+
+but GStreamer gives YOLO:
+
+```text
+640 × 360
+```
+
+then your potholes occupy fewer pixels.
+
+For a small pothole, that can make a **huge difference**.
+
+You want something like:
+
+```text
+Camera
+1920×1080
+   ↓
+GStreamer
+1920×1080
+   ↓
+YOLO preprocessing
+640×640 / 768×768
+```
+
+rather than unnecessarily doing:
+
+```text
+Camera
+1920×1080
+   ↓
+GStreamer
+320×240
+   ↓
+YOLO
+640×640
+```
+
+That second pipeline is technically resizing to 640, but the lost information cannot be recovered.
+
+---
+
+# 5. Check BGR/RGB conversion
+
+This is another common issue.
+
+Your pipeline may be doing:
+
+```text
+GStreamer → NV12
+       ↓
+OpenCV
+       ↓
+BGR
+       ↓
+YOLO
+```
+
+or:
+
+```text
+GStreamer → RGBA
+       ↓
+OpenCV
+       ↓
+RGB
+       ↓
+YOLO
+```
+
+If the conversion is wrong, the image can look strange to the model even if it looks acceptable to you.
+
+The important thing is:
+
+```text
+GStreamer output format
+        ↓
+correct conversion
+        ↓
+YOLO expected input
+```
+
+---
+
+# 6. Temporarily remove your preprocessing
+
+You previously mentioned that you're using:
+
+* letterboxing
+* CLAHE
+* mean/std normalization
+* low-light enhancement
+
+For debugging, **don't apply them initially**.
+
+Test:
+
+```text
+GStreamer frame
+      ↓
+YOLO
+```
+
+No:
+
+```text
+CLAHE
+normalization
+extra resizing
+gamma correction
+etc.
+```
+
+Why?
+
+Because your trained model was trained on a particular image distribution.
+
+If you suddenly do:
+
+```text
+original frame
+    ↓
+CLAHE
+    ↓
+mean/std normalization
+    ↓
+letterbox
+    ↓
+YOLO
+```
+
+you have changed the input distribution.
+
+First establish that:
+
+```text
+GStreamer frame
+       ↓
+same preprocessing as Ultralytics
+       ↓
+best.pt
+```
+
+works.
+
+Then add CLAHE/low-light enhancement **one at a time**.
+
+---
+
+# 7. Don't confuse YOLO confidence with model accuracy
+
+You may currently have something like:
+
+```text
+conf = 0.25
+iou = 0.45
+```
+
+If Jetson inference is producing:
+
+```text
+pothole 0.18
+pothole 0.21
+pothole 0.24
+```
+
+then:
+
+```text
+conf=0.25
+```
+
+will remove all of them.
+
+For debugging, temporarily use:
+
+```text
+conf = 0.10
+```
+
+and inspect the output.
+
+For example:
+
+```text
+YOLO
+ ↓
+conf=0.10
+ ↓
+see everything reasonably detected
+```
+
+Don't immediately use a high confidence threshold while diagnosing the problem.
+
+---
+
+# 8. Test TensorRT separately
+
+Since you're planning:
+
+```text
+PyTorch
+   ↓
+ONNX
+   ↓
+TensorRT
+   ↓
+FP16
+   ↓
+Jetson Orin Nano
+```
+
+you should compare:
+
+```text
+best.pt
+```
+
+against:
+
+```text
+best.engine
+```
+
+using **the exact same image**.
+
+For example:
+
+```text
+                 SAME IMAGE
+                     │
+          ┌──────────┴──────────┐
+          ↓                     ↓
+       best.pt               best.engine
+          ↓                     ↓
+      detections            detections
+```
+
+If both produce approximately the same detections:
+
+> TensorRT isn't the primary problem.
+
+If `.pt` detects the pothole but `.engine` doesn't:
+
+> Investigate TensorRT conversion / precision / preprocessing.
+
+---
+
+# 9. FP16 vs FP32
+
+Don't jump to INT8 yet.
+
+For your debugging, use:
+
+```text
+FP32
+```
+
+or:
+
+```text
+FP16
+```
+
+first.
+
+Your laptop is currently doing PyTorch CUDA inference.
+
+Jetson might be doing:
+
+```text
+TensorRT FP16
+```
+
+FP16 is normally a reasonable choice for Jetson.
+
+But if you're using INT8, calibration becomes another possible source of accuracy loss.
+
+So your debugging order should be:
+
+```text
+best.pt
+   ↓
+FP32/FP16
+   ↓
+TensorRT
+   ↓
+INT8 later
+```
+
+---
+
+# 10. Your DeepStream/FPS optimization is a separate issue
+
+You said:
+
+> multiple stream images optimized 25–30 FPS maintain - DeepStream
+
+That's fine, but **don't optimize FPS before establishing detection accuracy**.
+
+First get:
+
+```text
+1 stream
+↓
+1 frame
+↓
+correct image
+↓
+correct YOLO detection
+```
+
+Then optimize:
+
+```text
+1 stream → 30 FPS
+```
+
+Then:
+
+```text
+multiple streams → 25–30 FPS
+```
+
+Otherwise you have too many variables changing at once.
+
+---
+
+# What I would do on your Jetson
+
+**Don't retrain the model yet.**
+
+Do this exact sequence:
+
+```text
+STEP 1
+GStreamer
+   ↓
+save raw frame
+```
+
+```text
+STEP 2
+Take that SAME frame
+   ↓
+run laptop best.pt
+```
+
+```text
+STEP 3
+Take same frame
+   ↓
+run Jetson best.pt
+```
+
+```text
+STEP 4
+Same frame
+   ↓
+Jetson TensorRT FP16
+```
+
+Now we get:
+
+| Test                 | Result |
+| -------------------- | ------ |
+| Laptop `best.pt`     | ?      |
+| Jetson `best.pt`     | ?      |
+| Jetson TensorRT FP16 | ?      |
+
+From those three results we can pinpoint the problem.
+
+### And one thing I strongly recommend
+
+**Save the exact frame immediately before it enters YOLO on the Jetson.**
+
+Not the original camera video.
+
+Not a screenshot.
+
+Not a frame after detection.
+
+The actual:
+
+```text
+GStreamer → preprocessing → YOLO input
+```
+
+frame.
+
+That is the most useful debugging artifact right now.
